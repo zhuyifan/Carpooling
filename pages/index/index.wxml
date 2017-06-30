@@ -1,12 +1,7 @@
-<!--index.wxml-->
-<view class="page">
-  <button class="btn" type="default" size="mini">发布找车</button>
-  <button class="btn" type="default" size="mini">发布找人</button>
-    <scroll-view scroll-x="true" class="xscroll_bar">
-      <view class="menu_item {{index==activeIndex?'active':''}}" style="width:{{itemWidth}};" wx:for="{{menus}}" bindtap="tabChange" data-index="{{index}}">
-        <view class="{{!(index==0 || index-1==activeIndex || index==activeIndex)?'menu_item_border':''}}">
-      {{item.menu}}
-      </view>
-    </view>
-  </scroll-view>
-</view>
+<!--index.wxml-->  
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">车找人</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">人找车</view>    
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">筛选</view>
+</view> 

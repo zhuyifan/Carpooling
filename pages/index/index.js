@@ -1,37 +1,55 @@
-// pages/others/xscroll_top_bar/xscroll_top_bar.js
+//index.js  
+//获取应用实例  
+var app = getApp()
 Page({
   data: {
-    activeIndex: 0,
-    menus: [
-      {
-        'menuId': 1,
-        'menu': '全部'
-      },
-      {
-        'menuId': 1,
-        'menu': '人找车'
-      },
-      {
-        'menuId': 1,
-        'menu': '车找人'
-      },
-      {
-        'menuId': 1,
-        'menu': '筛选'
-      }
-    ]
+    /** 
+        * 页面配置 
+        */
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换  
+    currentTab: 0,
   },
+  onLoad: function () {
+    var that = this;
 
-  onShow: function () {
-    var span = wx.getSystemInfoSync().windowWidth / this.data.menus.length + 'px';
-    this.setData({
-      itemWidth: this.data.menus.length <= 5 ? span : '160rpx'
+    /** 
+     * 获取系统信息 
+     */
+    wx.getSystemInfo({
+
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
     });
   },
-  tabChange: function (e) {
-    var index = e.currentTarget.dataset.index;
-    this.setData({
-      activeIndex: index
-    });
+  /** 
+     * 滑动切换tab 
+     */
+  bindChange: function (e) {
+
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
+
+  },
+  /** 
+   * 点击tab切换 
+   */
+  swichNav: function (e) {
+
+    var that = this;
+
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
   }
 })

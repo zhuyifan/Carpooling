@@ -1,58 +1,18 @@
-/* pages/others/xscroll_top_bar/xscroll_top_bar.wxss */
-
-Page {
-  background: #fff;
-}
-
-.xscroll_bar {
-  overflow-y: hidden;
-  height: 80rpx;
-  line-height: 80rpx;
-  white-space: nowrap;
-  display: flex;
-  background: #ececec;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
-}
-
-.menu_item {
-  text-align: center;
-  font-size: 30rpx;
-  color: #7c7c7c;
-  display: inline-block;
-}
-
-.menu_item_border {
-  border-left: 1rpx solid #d3d3d3;
-}
-
-.xscroll_bar .active {
-  color: #1f1f1f;
-  background: #fff;
-}
-
-.menu_content {
-  padding: 30rpx;
-}
-
-.menu_panel {
-  margin: 20rpx 20rpx 20rpx 0;
-  border-left: 10rpx solid #ccc;
-  font-size: 26rpx;
-}
-
-.menu_panel>view {
-  padding: 30rpx;
-  background: #ececec;
-  border-radius: 0 20rpx 20rpx 0;
-}
-
-.btn{
-    background-color: palevioletred;
-    width: 110px;
-    height: 30px;
-}
+/**index.wxss**/  
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 25%;  
+    color: #777777;  
+}  
+.on{ color: dodgerblue;  
+    border-bottom: 5rpx solid dodgerblue;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    text-align: center;  
+}  
