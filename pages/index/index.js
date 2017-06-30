@@ -1,26 +1,37 @@
-//index.js
-//获取应用实例
-var app = getApp()
+// pages/others/xscroll_top_bar/xscroll_top_bar.js
 Page({
   data: {
-    motto: 'Hello World!!!',
-    userInfo: {}
+    activeIndex: 0,
+    menus: [
+      {
+        'menuId': 1,
+        'menu': '全部'
+      },
+      {
+        'menuId': 1,
+        'menu': '人找车'
+      },
+      {
+        'menuId': 1,
+        'menu': '车找人'
+      },
+      {
+        'menuId': 1,
+        'menu': '筛选'
+      }
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+
+  onShow: function () {
+    var span = wx.getSystemInfoSync().windowWidth / this.data.menus.length + 'px';
+    this.setData({
+      itemWidth: this.data.menus.length <= 5 ? span : '160rpx'
+    });
   },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
+  tabChange: function (e) {
+    var index = e.currentTarget.dataset.index;
+    this.setData({
+      activeIndex: index
+    });
   }
 })
