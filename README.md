@@ -1,3 +1,3 @@
 # Carpooling
 
-A Carpool RideShare WeChar Mini Program for Umass Students (Technically for Chinese students). Hehe
+A Carpool RideShare WeChat Mini Program for Umass Amherst Students (Technically for Chinese students). Hehe
