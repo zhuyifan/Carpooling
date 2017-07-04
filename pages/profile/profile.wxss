@@ -1,0 +1,17 @@
+/* profile.wxss */
+.form-input {
+  display:inline-flex;
+  margin-top:80rpx;
+  margin-left: 250rpx;
+  align-items: flex-start;
+}
+
+.submit {
+  color: white;
+  background-color: green;
+  margin-top: 80rpx;
+}
+
+
+
+

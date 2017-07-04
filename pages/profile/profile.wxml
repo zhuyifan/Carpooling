@@ -1,0 +1,38 @@
+<!--profile.wxml-->
+<view class="container">
+    <view class="name">
+    <view>
+      <text class="label">姓名</text>  
+      <input name="userInfo" type="text" class="form-input" placeholder="你的姓名" align="right" value="{{userInfo.nickName}}"/>
+    </view>
+
+    <view>
+      <text class="label">性别</text>
+      <radio-group class="radio-group form-input"             bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</radio-group>
+
+  </view>
+
+  <view>
+      <text class="label">手机号</text>
+      <input name="phoneNum" class="form-input" placeholder="必填"
+      align= "right" bindinput="numChange"/>
+  </view>
+
+  <view>
+      <text class="label">微信号</text>
+      <input name="wechatId" class="form-input" placeholder="选填"
+      align= "right" bindinput="idChange"/>
+  </view>
+
+  <view>
+      <text class="label">所在地</text>
+      <input name="location" class="form-input" placeholder="所在城市"
+      align= "right" bindinput="locChange"/>
+  </view>
+    <button class="submit" color="green" bindtap="submit">提交</button>
+    </view>
+</view>

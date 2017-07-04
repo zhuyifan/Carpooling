@@ -1,1 +1,36 @@
-/* pages/me/me.wxss */
+/**me.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: auto;
+  border-radius: 100%;
+}
+
+.userinfo-nickname {
+  color: #000;
+}
+
+.user-id {
+  margin-top: 50px;
+  color: #aaa;
+  font-size: 10px;
+}
+
+.profile {
+  margin-top:100rpx;
+}
+
+.history {
+  margin-top: 20rpx;
+}
+
+.group {
+  margin-top: 20rpx;
+}

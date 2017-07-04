@@ -1,15 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/add/add",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/profile/profile"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "dodgerblue",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#A61203",
     "navigationBarTitleText": "Umass拼车",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#a9b7b7",
@@ -35,5 +36,5 @@
         "text": "我的"
       }
     ]
-  }  
+  }
 }

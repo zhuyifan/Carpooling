@@ -1,2 +1,23 @@
 <!--pages/me/me.wxml-->
-<text>这页还是刁豫东写</text>
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="user-id">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="container">
+    <ul>
+      <view class="profile">
+        <button class="profile" bindtap="bindViewTap" plain="true">个人信息</button>
+      </view>
+      <view class="history">
+        <button class="profile" plain="true">历史记录</button>
+      </view>
+      <view class="group">
+        <button class="profile" plain="true">加入拼车群</button>
+      </view>
+    </ul>
+  </view>
+</view>

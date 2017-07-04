@@ -9,8 +9,8 @@
     width: 25%;  
     color: #777777;  
 }  
-.on{ color: dodgerblue;  
-    border-bottom: 5rpx solid dodgerblue;}  
+.on{ color: #A61203;  
+    border-bottom: 5rpx solid #A61203;}  
   
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
 .swiper-box view{  
