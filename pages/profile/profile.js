@@ -29,7 +29,7 @@ Page({
 
   idChange: function (e) {
     this.setData({
-      wecharId: e.detail.value
+      wechatId: e.detail.value
     })
     console.log('id：', e.detail.value)
   },
