@@ -14,8 +14,8 @@
   },
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "dodgerblue",
-    "borderStyle": "black",
+    "selectedColor": "#A61203",
+    "borderStyle": "#A61203",
     "list": [
       {
         "selectedIconPath": "images/car_active.png",

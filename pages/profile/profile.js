@@ -1,5 +1,6 @@
 // profile.js
 var app = getApp();
+var iniUserName = "";
 Page({
 
   /**
@@ -10,10 +11,17 @@ Page({
       { gender: 'male', value: '男', checked: 'true' },
       { gender: 'female', value: '女'},
     ],
-    userInfo: {},
-    phoneNum: {},
-    wechatId: {},
-    location: {}
+    userName: "",
+    phoneNum: "",
+    wechatId: "",
+    location: ""
+  },
+
+  nameChange: function(e){
+    this.setData({
+      userName: e.detail.value
+    })
+    console.log('name: ',this.data.userName)
   },
 
   radioChange: function (e) {
@@ -42,7 +50,23 @@ Page({
   },
 
   submit: function(){
-    if(this.data.userInfo.length == 0|| this.data.phoneNum.length <10){
+    if(this.data.userName == ""){
+      var that = this
+      //调用应用实例的方法获取全局数据
+      app.getUserInfo(function (userInfo) {
+        //更新数据
+        that.setData({
+          userInfo: userInfo
+        })
+        iniUserName = userInfo.nickName
+        console.log(userInfo.nickName)
+      })
+
+      this.setData({
+        userName: iniUserName
+      })
+    }
+    if(this.data.phoneNum.length <10){
       this.setData({
         phoneNum: "",
         wechatId: "",
@@ -52,7 +76,7 @@ Page({
     }
     else{
       this.setData({
-        userInfo: this.data.userInfo,
+        userName: this.data.userName,
         phoneNum: this.data.phoneNum,
         wechatId: this.data.wechatId,
         location: this.data.location
@@ -89,6 +113,7 @@ Page({
       that.setData({
         userInfo: userInfo
       })
+      console.log(userInfo.nickName)
     })
   },
 

@@ -3,7 +3,7 @@
     <view class="name">
     <view>
       <text class="label">姓名</text>  
-      <input name="userInfo" type="text" class="form-input" placeholder="你的姓名" align="right" value="{{userInfo.nickName}}"/>
+      <input name="userInfo" type="text" class="form-input" placeholder="你的姓名" align="right" placeholder="{{userInfo.nickName}}" bindinput="nameChange"/>
     </view>
 
     <view>
@@ -18,7 +18,7 @@
 
   <view>
       <text class="label">手机号</text>
-      <input name="phoneNum" class="form-input" placeholder="必填"
+      <input type="number" name="phoneNum" class="form-input" placeholder="必填"
       align= "right" bindinput="numChange"/>
   </view>
 
@@ -33,6 +33,8 @@
       <input name="location" class="form-input" placeholder="所在城市"
       align= "right" bindinput="locChange"/>
   </view>
-    <button class="submit" color="green" bindtap="submit">提交</button>
+  <view class="submit">
+    <button class="submitbtn" color="green" bindtap="submit">提交</button>
+  </view>
     </view>
 </view>
