@@ -1,6 +1,6 @@
 <!--profile.wxml-->
 <view class="container">
-    <view class="name">
+
     <view>
       <text class="label">姓名</text>  
       <input name="userInfo" type="text" class="form-input" placeholder="你的姓名" align="right" placeholder="{{userInfo.nickName}}" bindinput="nameChange"/>
@@ -36,5 +36,5 @@
   <view class="submit">
     <button class="submitbtn" color="green" bindtap="submit">提交</button>
   </view>
-    </view>
+
 </view>

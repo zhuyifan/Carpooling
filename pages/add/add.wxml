@@ -1,1 +1,11 @@
-<view>写你老木</view>
+<!--add.wxml-->
+<view class="addContainer">
+  <button class="addbtn" plain="ture" >
+    我是司机
+  </button>
+</view>
+<view class="addContainer">
+  <button class="addbtn" plain="true">
+  我是乘客
+  </button>
+</view>

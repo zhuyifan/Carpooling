@@ -1,9 +1,9 @@
 /* profile.wxss */
 .form-input {
   display:inline-flex;
-  margin-top:80rpx;
+  margin-top:100rpx;
   margin-left: 250rpx;
-  align-items: flex-end;
+  /*align-items: flex-end;*/
 }
 
 .submit {
@@ -18,7 +18,7 @@
 }
 
 .label {
-  margin-left: 3rpx;
+  /*margin-left: 3rpx;*/
   padding-left: 10rpx;
 }
 
