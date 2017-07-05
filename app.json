@@ -15,7 +15,7 @@
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#A61203",
-    "borderStyle": "#A61203",
+    "borderStyle": "black",
     "list": [
       {
         "selectedIconPath": "images/car_active.png",
