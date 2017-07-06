@@ -83,14 +83,22 @@ Page({
       })
       console.log(this.data)
       var a = this.showSuccess()
+      var b = setTimeout(this.back,1000)
     }
   },
+
 
   showSuccess: function() {
     wx.showToast({
       title: '提交成功',
-      icon: 'success'
+      icon: 'success',
     });
+  },
+
+  back:function(){
+    wx.navigateBack({
+      url: '../me/me'
+    })
   },
 
   showCancel: function () {
@@ -99,8 +107,6 @@ Page({
       icon: 'loading'
     });
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
