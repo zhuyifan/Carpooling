@@ -33,6 +33,12 @@
       <input name="location" class="form-input" placeholder="所在城市"
       align= "right" bindinput="locChange"/>
   </view>
+
+  <view>
+      <text class="label">车型</text>
+      <input name="model" class="form-input" placeholder="驾驶员选填"
+      align= "right" bindinput="locChange"/>
+  </view>
     <button class="submit" color="green" bindtap="submit">提交</button>
     </view>
 </view>

@@ -1,1 +1,8 @@
-<view>写你老木</view>
+<view class="container">
+  <view class="zhaoche">
+    <button class="zhaoche" bindtap="bindViewTap" plain="true">发布找车</button>
+  </view>
+  <view class="zhaoren">
+    <button class="zhaoren" bindtap="bindViewTab" plain="true">发布找人</button>
+  </view>
+</view>

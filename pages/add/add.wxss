@@ -1,1 +1,10 @@
 /* pages/add/add.wxss */
+.zhaoche{
+  width: 450rpx;
+  height: 250rpx;
+}
+
+.zhaoren{
+  width: 450rpx;
+  height: 250rpx;
+}
