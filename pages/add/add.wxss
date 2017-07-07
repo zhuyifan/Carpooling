@@ -2,4 +2,16 @@
 .addbtn {
   margin-top: 35rpx;
   height: 500rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  padding-top: 100rpx;
+}
+
+.dpImage {
+  height: 200rpx;
+  width: 200rpx;
+}
+
+.text {
+  display: block;
 }
