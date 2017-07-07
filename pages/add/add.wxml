@@ -1,12 +1,12 @@
 <!--add.wxml-->
 <view class="addContainer">
-  <button class="addbtn" plain="true" style="border-style: none">
+  <button class="addbtn" plain="true" style="border-style:none" >
     <image class="dpImage" src="../../images/driver.png"></image>
    <text class="text">我是司机</text>
   </button>
 </view>
 <view class="addContainer">
-  <button class="addbtn" plain="true" style="border-style: none" >
+  <button class="addbtn" plain="true" style="border-style:none" >
   <image class="dpImage" src="../../images/passenger.png"></image>
   <text class="text">我是乘客</text>
   </button>
