@@ -7,6 +7,11 @@
   padding-top: 100rpx;
 }
 
+.divide{
+  height: 20rpx;
+  background-color: whitesmoke;
+}
+
 .dpImage {
   height: 200rpx;
   width: 200rpx;

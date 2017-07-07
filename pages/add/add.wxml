@@ -5,6 +5,8 @@
    <text class="text">我是司机</text>
   </button>
 </view>
+<view class="divide">
+</view>
 <view class="addContainer">
   <button class="addbtn" plain="true" style="border-style: none" >
   <image class="dpImage" src="../../images/passenger.png"></image>
