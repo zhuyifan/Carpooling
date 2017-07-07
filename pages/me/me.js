@@ -1,7 +1,7 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'ID: DYDIsSB',
+    motto: 'ID: PPZhuIsSB',
     userInfo: {}
   },
   //事件处理函数

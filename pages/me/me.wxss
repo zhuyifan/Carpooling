@@ -18,19 +18,27 @@
 }
 
 .user-id {
+  display: flex;
   margin-top: 50px;
   color: #aaa;
   font-size: 10px;
+  align-items: center;
 }
 
 .profile {
   margin-top:100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 
 .history {
   margin-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 
 .group {
   margin-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }

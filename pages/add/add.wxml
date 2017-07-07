@@ -1,8 +1,13 @@
-<view class="container">
-  <view class="zhaoche">
-    <button class="zhaoche" bindtap="bindViewTap" plain="true">发布找车</button>
-  </view>
-  <view class="zhaoren">
-    <button class="zhaoren" bindtap="bindViewTab" plain="true">发布找人</button>
-  </view>
+<!--add.wxml-->
+<view class="addContainer">
+  <button class="addbtn" plain="true" style="border-style: none">
+    <image class="dpImage" src="../../images/driver.png"></image>
+   <text class="text">我是司机</text>
+  </button>
+</view>
+<view class="addContainer">
+  <button class="addbtn" plain="true" style="border-style: none" >
+  <image class="dpImage" src="../../images/passenger.png"></image>
+  <text class="text">我是乘客</text>
+  </button>
 </view>

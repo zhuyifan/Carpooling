@@ -1,15 +1,25 @@
 /* profile.wxss */
 .form-input {
   display:inline-flex;
-  margin-top:80rpx;
+  margin-top:100rpx;
   margin-left: 250rpx;
-  align-items: flex-start;
+  /*align-items: flex-end;*/
 }
 
 .submit {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.submitbtn {
   color: white;
   background-color: green;
   margin-top: 80rpx;
+}
+
+.label {
+  /*margin-left: 3rpx;*/
+  padding-left: 10rpx;
 }
 
 
