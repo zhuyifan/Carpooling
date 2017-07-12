@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/add/add",
     "pages/me/me",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/driver/driver",
+    "pages/passenger/passenger"
   ],
   "window": {
     "backgroundTextStyle": "light",

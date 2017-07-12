@@ -1,4 +1,4 @@
-// pages/add/add.js
+// pages/passenger/passenger.js
 Page({
 
   /**
@@ -6,18 +6,6 @@ Page({
    */
   data: {
   
-  },
-
-  iamdriver: function () {
-    wx.navigateTo({
-      url: '../driver/driver'
-    })
-  },
-
-  iampassenger: function () {
-    wx.navigateTo({
-      url: '../passenger/passenger'
-    })
   },
 
   /**
