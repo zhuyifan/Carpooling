@@ -6,32 +6,48 @@
       <input name="userInfo" type="text" class="form-input" placeholder="你的姓名" align="right" placeholder="{{userInfo.nickName}}" bindinput="nameChange"/>
     </view>
 
+    <view class="divider">
+      ___________________________________________
+    </view>
+
     <view>
       <text class="label">性别</text>
       <radio-group class="radio-group form-input"             bindchange="radioChange">
-      <label class="radio" wx:for="{{items}}">
-        <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
-</radio-group>
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+   <view class="divider">
+      ___________________________________________
+    </view>
 
-  </view>
 
   <view>
       <text class="label">手机号</text>
       <input type="number" name="phoneNum" class="form-input" placeholder="必填"
       align= "right" bindinput="numChange"/>
   </view>
+  <view class="divider">
+      ___________________________________________
+    </view>
 
   <view>
       <text class="label">微信号</text>
       <input name="wechatId" class="form-input" placeholder="选填"
       align= "right" bindinput="idChange"/>
   </view>
+  <view class="divider">
+      ___________________________________________
+    </view>
   <view>
       <text class="label">邮箱</text>
       <input name="location" class="form-input" placeholder="@umass.edu"
       align= "right" bindinput="locChange"/>
   </view>
+  <view class="divider">
+      ___________________________________________
+    </view>
   <view class="submit">
     <button class="submitbtn" color="green" bindtap="submit">提交</button>
   </view>
