@@ -1,7 +1,7 @@
 /* profile.wxss */
 .form-input {
   display:inline-flex;
-  margin-top:100rpx;
+  margin-top:50rpx;
   margin-left: 250rpx;
   /*align-items: flex-end;*/
 }
@@ -20,6 +20,10 @@
 .label {
   /*margin-left: 3rpx;*/
   padding-left: 10rpx;
+}
+
+.divider {
+  color: #C9DBE8;
 }
 
 
