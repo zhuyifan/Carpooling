@@ -27,10 +27,9 @@
       <input name="wechatId" class="form-input" placeholder="选填"
       align= "right" bindinput="idChange"/>
   </view>
-
   <view>
-      <text class="label">所在地</text>
-      <input name="location" class="form-input" placeholder="所在城市"
+      <text class="label">邮箱</text>
+      <input name="location" class="form-input" placeholder="@umass.edu"
       align= "right" bindinput="locChange"/>
   </view>
   <view class="submit">
