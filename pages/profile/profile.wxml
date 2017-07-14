@@ -2,16 +2,20 @@
 <view class="container">
 
     <view>
-      <text class="label">姓名</text>  
-      <input name="userInfo" type="text" class="form-input" placeholder="你的姓名" align="right" placeholder="{{userInfo.nickName}}" bindinput="nameChange"/>
+      <text class="label"></text>姓 名
+      <input name="userInfo"  
+      class="form-input" placeholder="{{userInfo.nickName}}" 
+      bindinput="nameChange"
+      align="right"/>
     </view>
+    
 
     <view class="divider">
       ___________________________________________
     </view>
 
     <view>
-      <text class="label">性别</text>
+      <text class="label">性 别</text>
       <radio-group class="radio-group form-input"             bindchange="radioChange">
         <label class="radio" wx:for="{{items}}">
           <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}

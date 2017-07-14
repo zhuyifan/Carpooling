@@ -20,3 +20,8 @@
 .text {
   display: block;
 }
+
+.text2 {
+  font-size: 10px;
+  color: #aaa;
+}
