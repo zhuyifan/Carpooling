@@ -1,1 +1,6 @@
 <view>发布页面</view>
+<picker mode="date" value="{{time}}" start="2015-09-01" end="2017-09-01" fields="month" bindchange="bindTimeChange">
+  <view class="picker">
+    出发时间: {{time}}
+  </view>
+</picker>

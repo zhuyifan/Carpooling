@@ -44,10 +44,9 @@
   <view class="divider">
       ___________________________________________
     </view>
-
   <view>
-      <text class="label">所在地</text>
-      <input name="location" class="form-input" placeholder="所在城市"
+      <text class="label">邮箱</text>
+      <input name="location" class="form-input" placeholder="@umass.edu"
       align= "right" bindinput="locChange"/>
   </view>
   <view class="divider">
