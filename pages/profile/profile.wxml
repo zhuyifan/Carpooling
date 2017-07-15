@@ -46,8 +46,8 @@
     </view>
   <view>
       <text class="label">邮箱</text>
-      <input name="location" class="form-input" placeholder="@umass.edu"
-      align= "right" bindinput="locChange"/>
+      <input name="email" class="form-input" placeholder="@umass.edu"
+      align= "right" bindinput="emailChange"/>
   </view>
   <view class="divider">
       ___________________________________________
