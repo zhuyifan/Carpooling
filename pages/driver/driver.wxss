@@ -1,1 +1,42 @@
-/* pages/driver/driver.wxss */
+.page {
+  min-height: 100%;
+  flex: 1;
+  background-color: #FBF9FE;
+  font-size: 40rpx;
+}
+.title{
+  height:60rpx;
+  margin-left: 25rpx;
+  padding-top:20rpx;
+  font-size: 30rpx;
+  color: lightslategrey;
+}
+.input{
+  background-color: white;
+  height:70rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black;
+}
+.blank{
+  margin-right: 50rpx;
+}
+
+.driver-select {
+  position: relative;
+  line-height: 30px;
+  padding-left: 15px;
+  padding-right: 30px;
+  border-right: 3rpx solid darkgray;
+}
+
+.driver-input{
+  padding-top:15rpx;
+  width:400rpx;
+  margin-left: 200rpx;
+  padding-left: -200rpx;
+  margin-top:-70rpx;
+}
+

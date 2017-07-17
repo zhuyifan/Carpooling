@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      items: [
+        { gender: 'male', value: '男', checked: 'true' },
+        { gender: 'female', value: '女' },
+      ],
+      date: "2016-09-01",
+      time: "12:01",
+
+      countryCodes: ["+1", "+86"],
+      countryCodeIndex: 0
+    
+  },
+
+  bindCountryCodeChange: function (e) {
+    console.log('picker country code 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      countryCodeIndex: e.detail.value
+    })
   },
 
   /**
