@@ -10,7 +10,8 @@ Page({
     nop: 0,
     time: "",
     destination: "",
-    bag: ""
+    bag: "",
+    view: 'APP'
   },
 
   /**

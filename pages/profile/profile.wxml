@@ -2,7 +2,7 @@
 <view class="container">
 
     <view>
-      <text class="label"></text>姓 名
+      <text class="label"></text>姓名
       <input name="userInfo"  
       class="form-input" placeholder="{{userInfo.nickName}}" 
       bindinput="nameChange"
@@ -15,8 +15,8 @@
     </view>
 
     <view>
-      <text class="label">性 别</text>
-      <radio-group class="radio-group form-input"             bindchange="radioChange">
+      <text class="label">性别</text>
+      <radio-group class="radio-group form-input" bindchange="radioChange">
         <label class="radio" wx:for="{{items}}">
           <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
         </label>
@@ -38,7 +38,7 @@
 
   <view>
       <text class="label">微信号</text>
-      <input name="wechatId" class="form-input" placeholder="选填"
+      <input name="wechatId" class="form-input" placeholder="选填(用于微信联络)"
       align= "right" bindinput="idChange"/>
   </view>
   <view class="divider">
@@ -46,8 +46,8 @@
     </view>
   <view>
       <text class="label">邮箱</text>
-      <input name="location" class="form-input" placeholder="@umass.edu"
-      align= "right" bindinput="locChange"/>
+      <input name="email" class="form-input" value="@umass.edu"
+      align= "right" bindinput="emailChange"/>
   </view>
   <view class="divider">
       ___________________________________________

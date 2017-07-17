@@ -14,7 +14,7 @@ Page({
     userName: "",
     phoneNum: "",
     wechatId: "",
-    location: ""
+    email: ""
   },
 
   nameChange: function(e){
@@ -42,11 +42,11 @@ Page({
     console.log('id：', e.detail.value)
   },
 
-  locChange: function (e) {
+  emailChange: function (e) {
     this.setData({
-      location: e.detail.value
+      email: e.detail.value
     })
-    console.log('location：', e.detail.value)
+    console.log('email：', e.detail.value)
   },
 
   submit: function(){

@@ -1,4 +1,12 @@
 <!-- passenger.wxml -->
 <view class="container">
-  
+  <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+  <view wx:elif="{{view == 'APP'}}"> APP </view>
+  <view wx:else="{{view == 'MINA'}}"> MINA </view>
+  <view>
+    <text class="label">姓名</text>
+    <input name="userInfo"  
+      class="form-input" placeholder="{{userInfo.nickName}}" 
+      align="right"/>
+  </view>
 </view>
