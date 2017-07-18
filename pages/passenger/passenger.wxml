@@ -1,12 +1,45 @@
 <!-- passenger.wxml -->
 <view class="container">
-  <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
-  <view wx:elif="{{view == 'APP'}}"> APP </view>
-  <view wx:else="{{view == 'MINA'}}"> MINA </view>
-  <view>
-    <text class="label">姓名</text>
-    <input name="userInfo"  
-      class="form-input" placeholder="{{userInfo.nickName}}" 
-      align="right"/>
+  <view wx:if="{{view == 'WEBVIEW'}}"> test0 </view>
+  <view wx:elif="{{view == 'APP'}}"> test1 </view>
+  <view wx:else="{{view == 'MINA'}}"> test2 </view>
+</view>
+
+<view class="page">
+  <view class="title">姓名</view>
+  <view class="input">
+      <input name="userInfo" placeholder="{{userInfo.nickName}}" 
+      bindinput="nameChange"/>
   </view>
+
+  <view class="title">性别</view>  
+    <radio-group name="gender">
+      <radio-group class="input" bindchange="genderChange">
+        <label class="blank" wx:for="{{items}}">
+           <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </radio-group>
+    </radio-group>
+
+  <view class="title">手机</view>
+    <view class="input">
+      <view class="phone_code" style="width: 100px">
+        <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+            <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
+        </picker> 
+      </view>
+      <input class="driver-input" placeholder="请输入号码" bindinput="numChange"/>
+  </view>
+
+  <view class="title">人数</view>
+    <view class="input">
+      
+    </view>
+</view>
+
+
+<view class="classname">
+  <view class="classname">姓名 {{userName}}</view>
+  <view class="classname">电话 {{phoneNum}}</view>
+  <view class="classname">性别 {{gender}}</view>
 </view>

@@ -26,6 +26,15 @@
       ___________________________________________
     </view>
 
+    <view>
+      <text class="label">邮箱</text>
+      <input name="email" class="form-input" placeholder="@umass.edu"
+      align= "right" bindinput="emailChange" auto-focus/>
+  </view>
+  <view class="divider">
+      ___________________________________________
+    </view>
+
 
   <view>
       <text class="label">手机号</text>
@@ -44,14 +53,7 @@
   <view class="divider">
       ___________________________________________
     </view>
-  <view>
-      <text class="label">邮箱</text>
-      <input name="email" class="form-input" value="@umass.edu"
-      align= "right" bindinput="emailChange"/>
-  </view>
-  <view class="divider">
-      ___________________________________________
-    </view>
+  
   <view class="submit">
     <button class="submitbtn" color="green" bindtap="submit">提交</button>
   </view>

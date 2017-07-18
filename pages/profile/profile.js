@@ -14,7 +14,8 @@ Page({
     userName: "",
     phoneNum: "",
     wechatId: "",
-    email: ""
+    email: "",
+    gender: 'male'
   },
 
   nameChange: function(e){
@@ -26,6 +27,9 @@ Page({
 
   radioChange: function (e) {
     console.log('gender：', e.detail.value)
+    this.setData({
+      gender: e.detail.value
+    })
   },
 
   numChange: function(e){
