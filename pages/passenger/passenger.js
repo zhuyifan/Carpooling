@@ -1,17 +1,57 @@
 // pages/passenger/passenger.js
 var app = getApp();
+var me = require('../profile/profile.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userName: {},
-    nop: 0,
+    userName: "",
+    phoneNum:"",
+    gender: 'male',
     time: "",
     destination: "",
     bag: "",
-    view: 'APP'
+    view: 'APP',
+    items: [
+      { gender: 'male', value: '男', checked: 'true' },
+      { gender: 'female', value: '女' },
+    ],
+    date: "2016-09-01",
+    time: "12:01",
+
+    countryCodes: ["+1", "+86"],
+    countryCodeIndex: 1
+  },
+
+  bindCountryCodeChange: function (e) {
+    console.log('picker country code 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      countryCodeIndex: e.detail.value
+    })
+  },
+
+  numChange: function (e) {
+    this.setData({
+      phoneNum: this.data.countryCodeIndex+e.detail.value
+    })
+    console.log('num：', e.detail.value)
+  },
+
+  nameChange: function(e) {
+    this.setData({
+      userName: e.detail.value
+    })
+    console.log('name:',this.data.userName)
+  },
+
+  genderChange: function (e) {
+    console.log('gender：', e.detail.value)
+    this.setData({
+      gender: e.detail.value
+    })
   },
 
   /**
@@ -24,7 +64,7 @@ Page({
         that.setData({
           userInfo: userInfo
         })
-        console.log(userInfo.nickName)
+        // console.log(userInfo.nickName)
       })
   },
 

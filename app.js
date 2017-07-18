@@ -1,5 +1,18 @@
 //app.js
 App({
+
+  data: {
+    items: [
+      { gender: 'male', value: '男', checked: 'true' },
+      { gender: 'female', value: '女' },
+    ],
+    userName: "",
+    phoneNum: "",
+    wechatId: "",
+    email: "",
+    gender: 'male'
+  },
+
   onLaunch: function() {
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
@@ -24,6 +37,15 @@ App({
   },
 
   globalData: {
-    userInfo: null
-  }
+    userInfo: null,
+    userName: "",
+    phoneNum: "",
+    wechatId: "",
+    email: "",
+    gender: ""
+  },
+
+  onShow: function(){
+    console.log(this.globalData)
+  },
 })
