@@ -57,4 +57,5 @@
   <view class="submit">
     <button class="submitbtn" color="green" bindtap="submit">发布</button>
   </view>
+  <view> </view>
 </view>

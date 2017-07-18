@@ -49,9 +49,8 @@
 
 .submitbtn {
   color: white;
-  background-color: green;
+  background-color: #A61203;
   margin-top: 80rpx;
-  margin-bottom: 80rpx;
   width: 600rpx;
 }
 
