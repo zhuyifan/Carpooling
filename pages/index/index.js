@@ -27,6 +27,11 @@ Page({
       }
 
     });
+
+  },
+
+  onShow:function(){
+    console.log(app.globalData)
   },
   /** 
      * 滑动切换tab 
@@ -35,7 +40,6 @@ Page({
 
     var that = this;
     that.setData({ currentTab: e.detail.current });
-
   },
   /** 
    * 点击tab切换 

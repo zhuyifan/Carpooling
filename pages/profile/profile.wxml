@@ -55,7 +55,7 @@
     </view>
   
   <view class="submit">
-    <button class="submitbtn" color="green" bindtap="submit">提交</button>
+    <button class="submitbtn" color="green" bindtap="submit">修改并储存</button>
   </view>
 
 </view>

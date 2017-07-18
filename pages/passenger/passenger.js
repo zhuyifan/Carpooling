@@ -1,5 +1,6 @@
 // pages/passenger/passenger.js
 var app = getApp();
+var me = require('../profile/profile.js')
 Page({
 
   /**
@@ -9,7 +10,6 @@ Page({
     userName: "",
     phoneNum:"",
     gender: 'male',
-    nop: 0,
     time: "",
     destination: "",
     bag: "",

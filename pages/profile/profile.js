@@ -1,6 +1,7 @@
 // profile.js
 var app = getApp();
 var iniUserName = "";
+var temp = "";
 Page({
 
   /**
@@ -28,7 +29,7 @@ Page({
   radioChange: function (e) {
     console.log('gender：', e.detail.value)
     this.setData({
-      gender: e.detail.value
+      gender: e.detail.value,
     })
   },
 
@@ -36,6 +37,7 @@ Page({
     this.setData({
       phoneNum: e.detail.value
     })
+
     console.log('num：',e.detail.value)
   },
 
@@ -72,19 +74,22 @@ Page({
     }
     if(this.data.phoneNum.length <10){
       this.setData({
-        phoneNum: "",
-        wechatId: "",
-        location: ""
+        phoneNum: ""
       })
       var b = this.showCancel()
     }
     else{
-      this.setData({
-        userName: this.data.userName,
-        phoneNum: this.data.phoneNum,
-        wechatId: this.data.wechatId,
-        location: this.data.location
-      })
+      // this.setData({
+      //   userName: this.data.userName,
+      //   phoneNum: this.data.phoneNum,
+      //   wechatId: this.data.wechatId,
+      // })
+      app.globalData.userName = this.data.userName
+      app.globalData.gender = this.data.gender
+      app.globalData.wechatId = this.data.wechatId
+      app.globalData.email = this.data.email
+      app.globalData.phoneNum = this.data.phoneNum
+
       console.log(this.data)
       var a = this.showSuccess()
       var b = setTimeout(this.back,1000)
@@ -100,6 +105,12 @@ Page({
   },
 
   back:function(){
+    this.setData({
+      userName:"",
+      email:"",
+      phoneNum:"",
+      wechatId:""
+    })
     wx.navigateBack({
       url: '../me/me'
     })
