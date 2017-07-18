@@ -21,4 +21,40 @@
       </view>
       <input class="driver-input" placeholder="请输入号码" />
   </view>
+
+   <view class="title">出发地</view>
+    <view class="input">
+      <view class="phone_code">
+        <picker bindchange="bindLocationChange1" value="{{index1}}" range="{{location}}">
+            <view class="place-select">{{location[index1]}}</view>
+        </picker> 
+      </view>
+    </view>
+
+    <view class="title">目的地</view>
+    <view class="input">
+      <view class="phone_code">
+        <picker bindchange="bindLocationChange2" value="{{index2}}" range="{{location}}">
+            <view class="place-select">{{location[index2]}}</view>
+        </picker> 
+      </view>
+    </view>
+
+    <view class="title">日期</view>
+    <view class="input">
+      <picker mode="date" value="{{date}}" start="2017-07-20" end="2020-7-20" bindchange="bindDateChange">
+        <view class="date-select">{{date}}</view>
+      </picker>
+    </view>
+
+    <view class="title">时间</view>
+    <view class="input">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="time-select">{{time}}</view>
+      </picker>
+    </view>
+
+  <view class="submit">
+    <button class="submitbtn" color="green" bindtap="submit">发布</button>
+  </view>
 </view>

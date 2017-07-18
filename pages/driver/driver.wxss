@@ -40,3 +40,18 @@
   margin-top:-70rpx;
 }
 
+.place-select{
+  position: relative;
+  line-height: 30px;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.submitbtn {
+  color: white;
+  background-color: green;
+  margin-top: 80rpx;
+  margin-bottom: 80rpx;
+  width: 600rpx;
+}
+

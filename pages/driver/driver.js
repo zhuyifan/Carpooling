@@ -9,11 +9,15 @@ Page({
         { gender: 'male', value: '男', checked: 'true' },
         { gender: 'female', value: '女' },
       ],
-      date: "2016-09-01",
+      date: "2017-07-01",
       time: "12:01",
 
       countryCodes: ["+1", "+86"],
-      countryCodeIndex: 0
+      countryCodeIndex: 0,
+
+      location: ["Amherst", "Boston", "New York City", "BOS Airport", "BDL Airport", "JFK Airport"],
+      index1: 0,
+      index2: 0
     
   },
 
@@ -22,6 +26,51 @@ Page({
 
     this.setData({
       countryCodeIndex: e.detail.value
+    })
+  },
+
+  bindLocationChange1: function (e) {
+    console.log('picker location 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      index1: e.detail.value
+    })
+  },
+
+  bindLocationChange2: function (e) {
+    console.log('picker location 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      index2: e.detail.value
+    })
+  },
+
+  bindDateChange: function (e) {
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  bindTimeChange: function (e) {
+    this.setData({
+      time: e.detail.value
+    })
+  },
+
+  submit: function () {
+   
+  },
+
+
+  showSuccess: function () {
+    wx.showToast({
+      title: '提交成功',
+      icon: 'success',
+    });
+  },
+
+  back: function () {
+    wx.navigateBack({
+      url: '../index/index'
     })
   },
 
