@@ -14,8 +14,9 @@ Page({
     ],
     userName: "",
     phoneNum: "",
-    wechatId: "",
+    carId: "",
     email: "",
+    carModel: "",
     gender: 'male'
   },
 
@@ -43,9 +44,16 @@ Page({
 
   idChange: function (e) {
     this.setData({
-      wechatId: e.detail.value
+      carId: e.detail.value
     })
     console.log('id：', e.detail.value)
+  },
+
+  modelChange: function(e) {
+    this.setData({
+      carModel: e.detail.value
+    })
+    console.log('model: ', e.detail.value)
   },
 
   emailChange: function (e) {
@@ -72,7 +80,7 @@ Page({
         userName: iniUserName
       })
     }
-    if(this.data.phoneNum.length <10){
+    if(this.data.phoneNum.length!=10&&this.data.phoneNum.length!=11){
       this.setData({
         phoneNum: ""
       })
@@ -82,13 +90,14 @@ Page({
       // this.setData({
       //   userName: this.data.userName,
       //   phoneNum: this.data.phoneNum,
-      //   wechatId: this.data.wechatId,
+      //   carId: this.data.carId,
       // })
       app.globalData.userName = this.data.userName
       app.globalData.gender = this.data.gender
-      app.globalData.wechatId = this.data.wechatId
+      app.globalData.carId = this.data.carId
       app.globalData.email = this.data.email
       app.globalData.phoneNum = this.data.phoneNum
+      app.globalData.carModel = this.data.carModel
 
       console.log(this.data)
       var a = this.showSuccess()
@@ -109,7 +118,8 @@ Page({
       userName:"",
       email:"",
       phoneNum:"",
-      wechatId:""
+      carId:"",
+      carModel:""
     })
     wx.navigateBack({
       url: '../me/me'

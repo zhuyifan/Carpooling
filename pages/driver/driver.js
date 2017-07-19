@@ -14,24 +14,50 @@ Page({
       phoneNum:"",
       start:"Amherst",
       end:"Amherst",
+      mod: "轿车",
       date: currentdate,
       time: currenttime,
 
       countryCodes: ["+1", "+86"],
       countryCodeIndex: 0,
 
+
       location: ["Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
       index1: 0,
-      index2: 0
+      index2: 0,
+
+      model: ["轿车", "SUV", "MPV", "商务车", "面包车"],
+      index: 0,
+
+      seat:[1, 2, 3, 4, 5, 6, 7],
+      index0: 0
     
   },
-
+  
   bindCountryCodeChange: function (e) {
     console.log('picker country code 发生选择改变，携带值为', e.detail.value);
 
     this.setData({
       countryCodeIndex: e.detail.value
     })
+  },
+
+  bindSeatChange: function (e) {
+    console.log('index0 code 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      index0: e.detail.value
+    })
+  },
+
+  bindModelChange: function (e) {
+    console.log('index 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      index: e.detail.value
+    })
+    this.data.mod = this.data.model[this.data.index]
+    console.log('车型为 ', this.data.mod)
   },
 
   bindStartChange: function (e) {

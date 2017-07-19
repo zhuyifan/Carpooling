@@ -49,13 +49,13 @@
 
  .submitbtn {
   color: white;
-  background-color: green;
+  background-color: #A61203;
   width: 600rpx;
   } 
 
   .btn{
     background-color: #FBF9FE;
-    padding-top:20rpx;
+    padding-top:80rpx;
     padding-bottom:100rpx;
   }
 

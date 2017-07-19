@@ -1,7 +1,7 @@
 <view class="page">
   <view class="title">姓名</view>
   <view class="input">
-      <input name="name" placeholder="{{driverName}}" />
+      <input name="name" value="{{driverName}}" />
   </view>
 
   <view class="title">手机</view>
@@ -11,12 +11,30 @@
             <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
         </picker> 
       </view>
-      <input class="driver-input" value="{{phoneNum}}" />
+      <input class="driver-input" type="number" value="{{phoneNum}}" />
   </view>
+
+  <view class="title">车型</view>
+    <view class="input">
+      <view class="model">
+        <picker bindchange="bindModelChange" value="{{index}}" range="{{model}}">
+            <view class="place-select">{{model[index]}}</view>
+        </picker> 
+      </view>
+    </view>
+    
+  <view class="title">剩余座位</view>
+    <view class="input">
+      <view class="seat">
+        <picker bindchange="bindSeatChange" value="{{index0}}" range="{{seat}}">
+            <view class="place-select">{{seat[index0]}}</view>
+        </picker> 
+      </view>
+    </view>
 
    <view class="title">出发地</view>
     <view class="input">
-      <view class="phone_code">
+      <view class="start">
         <picker bindchange="bindStartChange" value="{{index1}}" range="{{location}}">
             <view class="place-select">{{location[index1]}}</view>
         </picker> 
@@ -25,7 +43,7 @@
 
     <view class="title">目的地</view>
     <view class="input">
-      <view class="phone_code">
+      <view class="end">
         <picker bindchange="bindEndChange" value="{{index2}}" range="{{location}}">
             <view class="place-select">{{location[index2]}}</view>
         </picker> 
