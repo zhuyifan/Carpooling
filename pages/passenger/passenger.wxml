@@ -13,15 +13,6 @@
       bindinput="nameChange"/>
   </view>
 
-  <view class="title">性别</view>  
-    <radio-group name="gender">
-      <radio-group class="input" bindchange="genderChange">
-        <label class="blank" wx:for="{{items}}">
-           <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
-        </label>
-      </radio-group>
-    </radio-group>
-
   <view class="title">手机</view>
     <view class="input">
       <view class="phone_code" style="width: 100px">

@@ -1,21 +1,7 @@
 // pages/driver/driver.js
 var app = getApp();
-var date = new Date();
-var hyphen = "-";
-var colon = ":";
-var month = date.getMonth() + 1;
-var strDate = date.getDate();
-if (month >= 1 && month <= 9) {
-  month = "0" + month;
-}
-if (strDate >= 0 && strDate <= 9) {
-  strDate = "0" + strDate;
-}
-var currentdate = date.getFullYear() + 
-hyphen+ month + hyphen + strDate;
-
-var currenttime = date.getHours() + 
-colon +date.getMinutes();
+var currenttime = app.globalData.time;
+var currentdate = app.globalData.date;
 
 Page({
 
@@ -132,23 +118,23 @@ Page({
    */
   onShow: function () {
     console.log(this.data)
-    // if(this.data.driverName==""){
-    //   wx.showModal({
-    //     title: '不给你进',
-    //     content: '还没填写个人信息哦',
-    //     showCancel: false,
-    //     success: function (res) {
-    //       if (res.confirm) {
-    //         console.log('用户点击确定')
-    //         wx.navigateBack({
-    //           url: '../add/add'
-    //         })
-    //       } else if (res.cancel) {
-    //         console.log('用户点击取消')
-    //       }
-    //     }
-    //   })
-    // }
+    if(this.data.driverName==""){
+      wx.showModal({
+        title: '不给你进',
+        content: '还没填写个人信息哦',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateBack({
+              url: '../add/add'
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
   },
 
   /**

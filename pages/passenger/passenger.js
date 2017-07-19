@@ -1,5 +1,7 @@
 // pages/passenger/passenger.js
 var app = getApp();
+var currentdate = app.globalData.date;
+var currenttime = app.globalData.time;
 
 Page({
 
@@ -10,16 +12,12 @@ Page({
     userName: "",
     phoneNum:"",
     gender: 'male',
-    date: '2017-09-01',
-    time: '12:01',
+    date: currentdate,
+    time: currenttime,
     start:"",
     end: "",
     bag: "",
     view: 'APP',
-    items: [
-      { gender: 'male', value: '男', checked: 'true' },
-      { gender: 'female', value: '女' },
-    ],
     nop:["1","2","3","4"],
     nopIndex: 0,
     countryCodes: ["+1", "+86"],
