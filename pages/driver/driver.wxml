@@ -34,14 +34,14 @@
 
     <view class="title">日期</view>
     <view class="input">
-      <picker mode="date" value="{{date}}" start="2017-07-20" end="2020-7-20" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="{{date}}" end="2017-8-20" bindchange="bindDateChange">
         <view class="date-select">{{date}}</view>
       </picker>
     </view>
 
     <view class="title">时间</view>
     <view class="input">
-      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <picker mode="time" value="{{time}}" start="{{time}}" bindchange="bindTimeChange">
         <view class="time-select">{{time}}</view>
       </picker>
     </view>
