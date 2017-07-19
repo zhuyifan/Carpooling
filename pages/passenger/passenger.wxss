@@ -41,3 +41,10 @@
   padding-left: -200rpx;
   margin-top:-70rpx;
 }
+
+.nop {
+  /* outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black; */
+  margin-left:350rpx;
+}

@@ -1,6 +1,6 @@
 // pages/passenger/passenger.js
 var app = getApp();
-var me = require('../profile/profile.js')
+
 Page({
 
   /**
@@ -10,19 +10,20 @@ Page({
     userName: "",
     phoneNum:"",
     gender: 'male',
-    time: "",
-    destination: "",
+    date: '2017-09-01',
+    time: '12:01',
+    start:"",
+    end: "",
     bag: "",
     view: 'APP',
     items: [
       { gender: 'male', value: '男', checked: 'true' },
       { gender: 'female', value: '女' },
     ],
-    date: "2016-09-01",
-    time: "12:01",
-
+    nop:["1","2","3","4"],
+    nopIndex: 0,
     countryCodes: ["+1", "+86"],
-    countryCodeIndex: 1
+    countryCodeIndex: 0
   },
 
   bindCountryCodeChange: function (e) {
@@ -30,6 +31,14 @@ Page({
 
     this.setData({
       countryCodeIndex: e.detail.value
+    })
+  },
+
+    nopChange: function (e) {
+    console.log('picker nop code 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      nopIndex: e.detail.value
     })
   },
 
@@ -51,6 +60,19 @@ Page({
     console.log('gender：', e.detail.value)
     this.setData({
       gender: e.detail.value
+    })
+  },
+
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  bindTimeChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      time: e.detail.value
     })
   },
 

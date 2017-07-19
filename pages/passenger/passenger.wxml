@@ -1,9 +1,10 @@
 <!-- passenger.wxml -->
-<view class="container">
+
+<!-- <view class="container">
   <view wx:if="{{view == 'WEBVIEW'}}"> test0 </view>
   <view wx:elif="{{view == 'APP'}}"> test1 </view>
   <view wx:else="{{view == 'MINA'}}"> test2 </view>
-</view>
+</view> -->
 
 <view class="page">
   <view class="title">姓名</view>
@@ -31,15 +32,33 @@
       <input class="driver-input" placeholder="请输入号码" bindinput="numChange"/>
   </view>
 
-  <view class="title">人数</view>
+  <view class="title">乘客人数</view>
     <view class="input">
+      <view class="phone_code" style="width: 100px">
+        <picker bindchange="nopChange" value="{{nopIndex}}" range="{{nop}}">
+            <view class="nop">{{nop[nopIndex]}}</view>
+        </picker> 
+      </view>
+  </view>
 
+  <view class="title">日期</view>
+    <view class="input">
+      <picker mode="date" value="{{date}}" start="2017-07-17" end="2018-07-17" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+         </view>
+       </picker>
     </view>
-</view>
 
+  <view class="title">时间</view>
+    <view class="input">
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time}}
+      </view>
+    </picker>
+    </view>
 
-<view class="classname">
-  <view class="classname">姓名 {{userName}}</view>
-  <view class="classname">电话 {{phoneNum}}</view>
-  <view class="classname">性别 {{gender}}</view>
+    <view class="title">起点</view>
+
 </view>

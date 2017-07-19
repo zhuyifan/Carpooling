@@ -1,21 +1,27 @@
 // pages/driver/driver.js
+var app = getApp();
+// var dateObject = new Date();
+// var month = dateObject.getMonth();
+// var date = dateObject.getDate();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      items: [
-        { gender: 'male', value: '男', checked: 'true' },
-        { gender: 'female', value: '女' },
-      ],
+      driverName:"",
+      gender:"",
+      phoneNum:"",
+      start:"Amherst",
+      end:"Amherst",
       date: "2017-07-01",
       time: "12:01",
 
       countryCodes: ["+1", "+86"],
       countryCodeIndex: 0,
 
-      location: ["Amherst", "Boston", "New York City", "BOS Airport", "BDL Airport", "JFK Airport"],
+      location: ["Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
       index1: 0,
       index2: 0
     
@@ -29,37 +35,58 @@ Page({
     })
   },
 
-  bindLocationChange1: function (e) {
-    console.log('picker location 发生选择改变，携带值为', e.detail.value);
-
+  bindStartChange: function (e) {
+    console.log('index1 发生选择改变，携带值为', e.detail.value);
     this.setData({
-      index1: e.detail.value
+      index1: e.detail.value,
     })
+    this.data.start = this.data.location[this.data.index1]
+    console.log('出发地城市为 ',this.data.start)
   },
 
-  bindLocationChange2: function (e) {
-    console.log('picker location 发生选择改变，携带值为', e.detail.value);
+  bindEndChange: function (e) {
+    console.log('index2 发生选择改变，携带值为', e.detail.value);
 
     this.setData({
       index2: e.detail.value
     })
+    this.data.end = this.data.location[this.data.index2]
+    console.log('目的地城市为 ', this.data.end)
   },
 
   bindDateChange: function (e) {
     this.setData({
       date: e.detail.value
     })
+    console.log('date is ',e.detail.value)
   },
   bindTimeChange: function (e) {
     this.setData({
       time: e.detail.value
     })
+    console.log('time is ', e.detail.value)
   },
 
   submit: function () {
-   
+    if(this.data.start==this.data.end){
+      wx.showModal({
+        title: '别搞事',
+        content: '出发地与目的地不可一致',
+        showCancel: false,
+      })
+    }
+    else{
+      this.showSuccess()
+      var b = setTimeout(this.back,1000)
+    }
+    console.log(this.data)
   },
 
+  back: function(){
+    wx.navigateBack({
+      url: '../add/add'
+    })
+  },
 
   showSuccess: function () {
     wx.showToast({
@@ -68,17 +95,15 @@ Page({
     });
   },
 
-  back: function () {
-    wx.navigateBack({
-      url: '../index/index'
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      driverName: app.globalData.userName,
+      phoneNum: app.globalData.phoneNum,
+      gender: app.globalData.gender
+    })
   },
 
   /**
@@ -92,7 +117,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    console.log(this.data)
+    if(this.data.driverName==""){
+      wx.showModal({
+        title: '不给你进',
+        content: '还没填写个人信息哦',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateBack({
+              url: '../add/add'
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
   },
 
   /**
