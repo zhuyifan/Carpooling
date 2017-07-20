@@ -15,7 +15,8 @@ Page({
       start:"Amherst",
       end:"Amherst",
       mod: "轿车",
-      plate:"",
+      tempFilePaths:'',
+      condition: false,
       date: currentdate,
       time: currenttime,
 
@@ -30,9 +31,24 @@ Page({
       model: ["Sedan", "SUV", "MPV", "BPV", "MINIBUS","Coupe"],
       index: 0,
 
-      seat:[1, 2, 3, 4, 5, 6, 7],
+      seat:[1, 2, 3, 4, 5, 6],
       index0: 0
     
+  },
+
+  chooseimage: function () {
+    var that = this;
+    wx.chooseImage({
+      count: 1, 
+      sizeType: ['compressed'],  
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        that.setData({
+          tempFilePaths: res.tempFilePaths,
+          condition:true
+        })
+      }
+    })
   },
   
   bindCountryCodeChange: function (e) {
@@ -59,13 +75,6 @@ Page({
     })
     this.data.mod = this.data.model[this.data.index]
     console.log('车型为 ', this.data.mod)
-  },
-
-  bindPlateChange:function(e) {
-    console.log('plate发生改变，携带值为 ', e.detail.value)
-    this.setData({
-      plate: e.detail.value
-    })
   },
 
   bindStartChange: function (e) {

@@ -20,6 +20,17 @@
   outline-width: 1rpx;
   outline-color: black;
 }
+
+.imageInput{
+  background-color: white;
+  height: 140rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black;
+}
+
 .blank{
   margin-right: 50rpx;
 }
@@ -47,15 +58,23 @@
   padding-right: 30px;
 }
 
- .submitbtn {
+.submitbtn {
   color: white;
   background-color: #A61203;
   width: 600rpx;
-  } 
+} 
+  
+.btn{
+  background-color: #FBF9FE;
+  padding-top:80rpx;
+  padding-bottom:100rpx;
+}
 
-  .btn{
-    background-color: #FBF9FE;
-    padding-top:80rpx;
-    padding-bottom:100rpx;
-  }
+.uploadImage{
+    width:500rpx;
+    height:70rpx;
+    margin-left:200rpx;
+    margin-top:-80rpx;
+}
+
 
