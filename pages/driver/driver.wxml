@@ -5,24 +5,27 @@
   </view>
 
   <view class="title">手机</view>
-    <view class="input">
-      <view class="phone_code" style="width: 100px">
-        <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
-            <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
-        </picker> 
-      </view>
-      <input class="driver-input" type="number" value="{{phoneNum}}" />
+  <view class="input">
+    <view class="phone_code" style="width: 100px">
+      <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+          <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
+      </picker> 
+     </view>
+    <input class="driver-input" type="number" value="{{phoneNum}}" />
   </view>
 
-  <view class="title">车型</view>
+   <view class="title">车型以及照片</view>
     <view class="input">
-      <view class="model">
-        <picker bindchange="bindModelChange" value="{{index}}" range="{{model}}">
-            <view class="place-select">{{model[index]}}</view>
-        </picker> 
-      </view>
-    </view>
-    
+    <view class="type_car" style="width: 100px">
+      <picker bindchange="bindModelChange" value="{{index}}" range="{{model}}">
+          <view class="driver-select">{{model[index]}}</view>
+      </picker> 
+     </view>
+    <button class="uploadImage" plain="true" bindtap="chooseimage" style="color: blue;border-style:none">选择图片</button>  
+  </view>
+   <view wx:if="{{condition}}" style="text-align:center;margin-top:20rpx;">
+    <image src="{{tempFilePaths }}" mode="aspecFill" style="width: 80%; height: 350rpx"/>
+  </view> 
   <view class="title">剩余座位</view>
     <view class="input">
       <view class="seat">
@@ -52,14 +55,14 @@
 
     <view class="title">日期</view>
     <view class="input">
-      <picker mode="date" value="{{date}}" start="{{date}}" end="2018-8-20" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="{{currentdate}}" end="2017-8-20" bindchange="bindDateChange">
         <view class="date-select">{{date}}</view>
       </picker>
     </view>
 
     <view class="title">时间</view>
     <view class="input">
-      <picker mode="time" value="{{time}}" start="{{time}}" bindchange="bindTimeChange">
+      <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
         <view class="time-select">{{time}}</view>
       </picker>
     </view>
