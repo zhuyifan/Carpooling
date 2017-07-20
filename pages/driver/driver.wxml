@@ -5,23 +5,24 @@
   </view>
 
   <view class="title">手机</view>
-    <view class="input">
-      <view class="phone_code" style="width: 100px">
-        <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
-            <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
-        </picker> 
-      </view>
-      <input class="driver-input" type="number" value="{{phoneNum}}" />
+  <view class="input">
+    <view class="phone_code" style="width: 100px">
+      <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+          <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
+      </picker> 
+     </view>
+    <input class="driver-input" type="number" value="{{phoneNum}}" />
   </view>
 
-  <view class="title">车型</view>
+   <view class="title">车型以及车牌号</view>
     <view class="input">
-      <view class="model">
-        <picker bindchange="bindModelChange" value="{{index}}" range="{{model}}">
-            <view class="place-select">{{model[index]}}</view>
-        </picker> 
-      </view>
-    </view>
+    <view class="type_car" style="width: 100px">
+      <picker bindchange="bindModelChange" value="{{index}}" range="{{model}}">
+          <view class="driver-select">{{model[index]}}</view>
+      </picker> 
+     </view>
+    <input class="driver-input" placeholder="请输入车牌号" />
+  </view>
     
   <view class="title">剩余座位</view>
     <view class="input">

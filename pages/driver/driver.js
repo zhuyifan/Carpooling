@@ -15,6 +15,7 @@ Page({
       start:"Amherst",
       end:"Amherst",
       mod: "轿车",
+      plate:"",
       date: currentdate,
       time: currenttime,
 
@@ -26,7 +27,7 @@ Page({
       index1: 0,
       index2: 0,
 
-      model: ["轿车", "SUV", "MPV", "商务车", "面包车"],
+      model: ["Sedan", "SUV", "MPV", "BPV", "MINIBUS","Coupe"],
       index: 0,
 
       seat:[1, 2, 3, 4, 5, 6, 7],
@@ -58,6 +59,13 @@ Page({
     })
     this.data.mod = this.data.model[this.data.index]
     console.log('车型为 ', this.data.mod)
+  },
+
+  bindPlateChange:function(e) {
+    console.log('plate发生改变，携带值为 ', e.detail.value)
+    this.setData({
+      plate: e.detail.value
+    })
   },
 
   bindStartChange: function (e) {
@@ -100,10 +108,10 @@ Page({
         showCancel: false,
       })
     }
-    else{
-      this.showSuccess()
-      var b = setTimeout(this.back,1000)
-    }
+    // else{
+    //   this.showSuccess()
+    //   var b = setTimeout(this.back,1000)
+    // }
     console.log(this.data)
   },
 
@@ -144,23 +152,23 @@ Page({
    */
   onShow: function () {
     console.log(this.data)
-    if(this.data.driverName==""){
-      wx.showModal({
-        title: '不给你进',
-        content: '还没填写个人信息哦',
-        showCancel: false,
-        success: function (res) {
-          if (res.confirm) {
-            console.log('用户点击确定')
-            wx.navigateBack({
-              url: '../add/add'
-            })
-          } else if (res.cancel) {
-            console.log('用户点击取消')
-          }
-        }
-      })
-    }
+    // if(this.data.driverName==""){
+    //   wx.showModal({
+    //     title: '不给你进',
+    //     content: '还没填写个人信息哦',
+    //     showCancel: false,
+    //     success: function (res) {
+    //       if (res.confirm) {
+    //         console.log('用户点击确定')
+    //         wx.navigateBack({
+    //           url: '../add/add'
+    //         })
+    //       } else if (res.cancel) {
+    //         console.log('用户点击取消')
+    //       }
+    //     }
+    //   })
+    // }
   },
 
   /**

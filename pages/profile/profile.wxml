@@ -4,7 +4,7 @@
     <view>
       <text class="label"></text>姓名
       <input name="userInfo"  
-      class="form-input" placeholder="必填" 
+      class="form-input" placeholder="{{userInfo.nickName}}" 
       bindinput="nameChange"
       align="right"/>
     </view>
@@ -26,15 +26,6 @@
       ___________________________________________
     </view>
 
-  <view>
-      <text class="label">手机号</text>
-      <input type="number" name="phoneNum" class="form-input" placeholder="必填"
-      align= "right" bindinput="numChange"/>
-  </view>
-  <view class="divider">
-      ___________________________________________
-    </view>
-
     <view>
       <text class="label">邮箱</text>
       <input name="email" class="form-input" placeholder="@umass.edu"
@@ -44,24 +35,25 @@
       ___________________________________________
     </view>
 
+
   <view>
-      <text class="label">车牌号</text>
-      <input name="carId" class="form-input" placeholder="司机选填"
+      <text class="label">手机号</text>
+      <input type="number" name="phoneNum" class="form-input" placeholder="必填"
+      align= "right" bindinput="numChange"/>
+  </view>
+  <view class="divider">
+      ___________________________________________
+    </view>
+
+  <view>
+      <text class="label">微信号</text>
+      <input name="wechatId" class="form-input" placeholder="选填(用于微信联络)"
       align= "right" bindinput="idChange"/>
   </view>
   <view class="divider">
       ___________________________________________
     </view>
   
-  <view>
-      <text class="label">车型</text>
-      <input name="carModel" class="form-input" placeholder="司机选填"
-      align= "right" bindinput="modelChange"/>
-  </view>
-  <view class="divider">
-      ___________________________________________
-    </view>
-
   <view class="submit">
     <button class="submitbtn" color="green" bindtap="submit">修改并储存</button>
   </view>
