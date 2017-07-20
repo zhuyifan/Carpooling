@@ -18,6 +18,7 @@ Page({
       tempFilePaths:'',
       condition: false,
       date: currentdate,
+      curdate:currentdate,
       time: currenttime,
 
       countryCodes: ["+1", "+86"],
@@ -117,10 +118,10 @@ Page({
         showCancel: false,
       })
     }
-    // else{
-    //   this.showSuccess()
-    //   var b = setTimeout(this.back,1000)
-    // }
+    else{
+      this.showSuccess()
+      var b = setTimeout(this.back,1000)
+    }
     console.log(this.data)
   },
 
@@ -161,23 +162,23 @@ Page({
    */
   onShow: function () {
     console.log(this.data)
-    // if(this.data.driverName==""){
-    //   wx.showModal({
-    //     title: '不给你进',
-    //     content: '还没填写个人信息哦',
-    //     showCancel: false,
-    //     success: function (res) {
-    //       if (res.confirm) {
-    //         console.log('用户点击确定')
-    //         wx.navigateBack({
-    //           url: '../add/add'
-    //         })
-    //       } else if (res.cancel) {
-    //         console.log('用户点击取消')
-    //       }
-    //     }
-    //   })
-    // }
+    if(this.data.driverName==""){
+      wx.showModal({
+        title: '不给你进',
+        content: '还没填写个人信息哦',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateBack({
+              url: '../add/add'
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
   },
 
   /**
