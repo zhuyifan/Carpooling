@@ -60,7 +60,7 @@
 
 .submitbtn {
   color: white;
-  background-color: #A61203;
+  background-color: #A61203; 
   width: 600rpx;
 } 
   

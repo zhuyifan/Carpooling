@@ -23,7 +23,7 @@
      </view>
     <button class="uploadImage" plain="true" bindtap="chooseimage" style="color: blue;border-style:none">选择图片</button>  
   </view>
-   <view wx:if="{{condition}}" style="text-align:center;margin-top:20rpx;">
+  <view wx:if="{{condition}}" style="text-align:center;margin-top:20rpx;">
     <image src="{{tempFilePaths }}" mode="aspecFill" style="width: 80%; height: 350rpx"/>
   </view> 
   <view class="title">剩余座位</view>
@@ -55,7 +55,7 @@
 
     <view class="title">日期</view>
     <view class="input">
-      <picker mode="date" value="{{date}}" start="{{currentdate}}" end="2017-8-20" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="{{curdate}}" end="2017-8-20" bindchange="bindDateChange">
         <view class="date-select">{{date}}</view>
       </picker>
     </view>
