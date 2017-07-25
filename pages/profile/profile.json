@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "个人信息"
+  "navigationBarTitleText": "个人信息",
+  "data":{
+    "userName": "",
+    "phoneNum": "",
+    "wechatId": "",
+    "email": "",
+    "gender":""
+  }
 }
