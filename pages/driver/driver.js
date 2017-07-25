@@ -12,6 +12,7 @@ Page({
       driverName:"",
       gender:"",
       phoneNum:"",
+      remainedSeat:"",
       start:"Amherst",
       end:"Amherst",
       mod: "轿车",
@@ -66,6 +67,8 @@ Page({
     this.setData({
       index0: e.detail.value
     })
+    this.data.remainedSeat = this.data.seat[this.data.index0];
+    console.log('remained seat is ', this.data.remainedSeat);
   },
 
   bindModelChange: function (e) {

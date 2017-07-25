@@ -54,7 +54,7 @@ App({
     userInfo: null,
     userName: "",
     phoneNum: "",
-    carId: "",
+    wechatId: "",
     carModel: "",
     email: "",
     gender: "",

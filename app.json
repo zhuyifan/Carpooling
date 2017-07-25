@@ -38,5 +38,13 @@
         "text": "我的"
       }
     ]
+  },
+  "globalData":{
+    "userName": "",
+    "phoneNum": "",
+    "wechatId": "",
+    "carModel": "",
+    "email": "",
+    "gender": ""
   }
 }
