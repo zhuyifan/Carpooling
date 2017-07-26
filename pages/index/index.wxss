@@ -1,6 +1,25 @@
 /**index.wxss**/  
+.from-picker{
+  position:absolute;
+  left:100rpx;
+  margin-top:-50rpx;
+  color:white;
+  font-size: 30rpx;
+}
+.to-picker{
+  position:absolute;
+  right:100rpx;
+  color:white;
+  font-size: 30rpx;
+  margin-top:-50rpx;
+}
 .picker{
   background-color: #A61203;
+}
+.arrow{
+  color:white;
+  margin-bottom:30rpx;
+  padding-left:50%;
 }
 .swiper-tab{  
     width: 100%;  
