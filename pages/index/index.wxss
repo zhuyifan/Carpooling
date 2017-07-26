@@ -17,16 +17,18 @@
     text-align: center;  
 }  
 
-.divider {
-  color: gainsboro;
-}
-
 .title {
   padding-top: 25rpx;
-  padding-left: 35rpx;
+  text-align:center;
 }
 
 .time{
+  color:gray;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.mode{
   color:gray;
   padding-left: 35rpx;
   font-size: 30rpx;
@@ -37,5 +39,20 @@
   padding-top: 10px;
   padding-left: 35rpx;
   font-size: 30rpx;
+}
+
+.people{
+  color: gray;
+  padding-top: 10px;
+  padding-left: 15rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+  border-bottom: 3rpx solid darkgray;
+}
+
+.gender{
+  padding-left: 10px;
+  height: 25rpx;
+  width: 25rpx;
 }
 

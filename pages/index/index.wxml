@@ -11,14 +11,18 @@
       <view class="title">
         <text class="shifa">{{item.qidian}} ➔ {{item.zhongdian}}</text>
       </view>
-      <view class="time " style="padding-top:10px;">
-        <text>出发：{{item.date}} {{item.time}}</text>
+      <view class="time" style="padding-top:10px;">
+        <text>出发时间：{{item.date}} {{item.time}}</text>
+      </view>
+      <view class="mode" style="padding-top:10px;">
+        <text>车型：{{item.mode}}</text>
       </view>
       <view class="type">
-        <text>{{item.usertype}}/空位:{{item.seat}}</text>
+        <text>{{item.usertype}}/{{item.seat}}</text>
       </view>
+      <view class="people">
+        <image class="gender" src="/images/male.png"></image>
+        <text>{{item.name}}  {{item.phone}}</text>
     </view>
-        <view class="divider">
-      _________________________________________________
     </view>
   </view>

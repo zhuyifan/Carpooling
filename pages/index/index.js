@@ -11,12 +11,12 @@ Page({
     // tab切换  
     currentTab: 0,
     items: [
-      { name:"刁豫东三", qidian:"BDL", date:"2017-8-9", time:"18:00", zhongdian:"Amherst", usertype:"人找车", seat:2},
-      { name: "刁豫东四", qidian: "Logan", date: "2017-7-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", seat: 2},
-      { name: "刁豫东五", qidian: "Boston", date: "2017-8-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", seat: 3},
-      { name: "刁豫东三", qidian: "Amherst", date: "2017-9-9", time: "18:00", zhongdian: "BDL", usertype: "车找人", seat: 2},
-      { name: "刁豫东一", qidian: "JFK", date: "2017-9-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", seat: 1},
-      { name: "刁豫东二", qidian: "Boston", date: "2017-10-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", seat: 2},
+      { name:"刁豫东三", phone: 4139926367, qidian:"BDL", date:"2017-8-9", time:"18:00", zhongdian:"Amherst", usertype:"人找车", mode:"miniBus", seat:"2人"},
+      { name: "刁豫东四", phone: 4139926367, qidian: "Logan", date: "2017-7-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", mode: "SUV", seat: "2人"},
+      { name: "刁豫东五", phone: 4139926367, qidian: "Boston", date: "2017-8-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "Coupe", seat: "3空位"},
+      { name: "刁豫东三", phone: 4139926367, qidian: "Amherst", date: "2017-9-9", time: "18:00", zhongdian: "BDL", usertype: "车找人", mode: "SUV", seat: "2空位"},
+      { name: "刁豫东一", phone: 4139926367, qidian: "JFK", date: "2017-9-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", mode: "Sedan", seat: "1人"},
+      { name: "刁豫东二", phone: 4139926367, qidian: "Boston", date: "2017-10-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "SUV", seat: "2空位"},
     ]
   },
   onLoad: function () {
