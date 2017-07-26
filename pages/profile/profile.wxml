@@ -1,7 +1,7 @@
 <!--profile.wxml-->
 <view class="container">
 
-    <view>
+    <view class="divider">
       <text class="label"></text>姓名
       <input name="userInfo"  
       class="form-input" placeholder="{{userInfo.nickName}}" 
@@ -11,10 +11,6 @@
     
 
     <view class="divider">
-      ___________________________________________
-    </view>
-
-    <view>
       <text class="label">性别</text>
       <radio-group class="radio-group form-input" bindchange="radioChange">
         <label class="radio" wx:for="{{items}}">
@@ -22,37 +18,26 @@
         </label>
       </radio-group>
     </view>
-   <view class="divider">
-      ___________________________________________
-    </view>
 
-    <view>
+    <view class="divider">
       <text class="label">邮箱</text>
       <input name="email" class="form-input" placeholder="@umass.edu"
       align= "right" bindinput="emailChange" auto-focus/>
   </view>
+
+
   <view class="divider">
-      ___________________________________________
-    </view>
-
-
-  <view>
       <text class="label">手机号</text>
       <input type="number" name="phoneNum" class="form-input" placeholder="必填"
       align= "right" bindinput="numChange"/>
   </view>
-  <view class="divider">
-      ___________________________________________
-    </view>
 
-  <view>
+
+  <view class="divider">
       <text class="label">微信号</text>
       <input name="wechatId" class="form-input" placeholder="必填"
       align= "right" bindinput="idChange"/>
   </view>
-  <view class="divider">
-      ___________________________________________
-    </view>
   
   <view class="submit">
     <button class="submitbtn" color="green" bindtap="submit">修改并储存</button>

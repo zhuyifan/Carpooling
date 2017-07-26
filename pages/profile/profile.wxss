@@ -23,7 +23,8 @@
 }
 
 .divider {
-  color: #C9DBE8;
+  border-bottom: 3rpx solid darkgray;
+  padding-bottom: 50rpx;
 }
 
 
