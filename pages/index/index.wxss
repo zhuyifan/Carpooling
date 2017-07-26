@@ -16,3 +16,26 @@
 .swiper-box view{  
     text-align: center;  
 }  
+
+.divider {
+  color: gainsboro;
+}
+
+.title {
+  padding-top: 25rpx;
+  padding-left: 35rpx;
+}
+
+.time{
+  color:gray;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.type{
+  color: gray;
+  padding-top: 10px;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
