@@ -12,7 +12,7 @@
         <button class="profile" bindtap="bindViewTap" plain="true">个人信息</button>
       </view>
       <view class="history">
-        <button class="profile" plain="true">历史记录</button>
+        <button class="profile" plain="true">我的发布</button>
       </view>
       <view class="group">
         <button class="profile" plain="true">加入拼车群</button>

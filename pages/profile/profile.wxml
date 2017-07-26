@@ -47,7 +47,7 @@
 
   <view>
       <text class="label">微信号</text>
-      <input name="wechatId" class="form-input" placeholder="选填(用于微信联络)"
+      <input name="wechatId" class="form-input" placeholder="必填"
       align= "right" bindinput="idChange"/>
   </view>
   <view class="divider">

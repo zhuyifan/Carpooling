@@ -148,7 +148,8 @@ Page({
     this.setData({
       driverName: app.globalData.userName,
       phoneNum: app.globalData.phoneNum,
-      gender: app.globalData.gender
+      gender: app.globalData.gender,
+      wechatID: app.globalData.wechatId
     })
     console.log(currentdate)
   },

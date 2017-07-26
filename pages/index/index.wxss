@@ -1,4 +1,7 @@
 /**index.wxss**/  
+.picker{
+  background-color: #A61203;
+}
 .swiper-tab{  
     width: 100%;  
     border-bottom: 2rpx solid #777777;  
@@ -47,12 +50,36 @@
   padding-left: 15rpx;
   padding-bottom: 30rpx;
   font-size: 30rpx;
-  border-bottom: 3rpx solid darkgray;
 }
 
 .gender{
   padding-left: 10px;
   height: 25rpx;
   width: 25rpx;
+}
+
+.wechat-copy{
+  position:absolute;
+  right:20rpx;
+  font-size: 25rpx;
+  text-align:center;
+  color: white;
+  background-color: #5e5cc6;
+  border-radius: 10rpx;
+}
+
+.call{
+  position:absolute;
+  right:20rpx;
+  font-size: 25rpx;
+  text-align:center;
+  color: white;
+  background-color: #5cc6b0;
+  border-radius: 10rpx;
+}
+
+.divide{
+  height: 20rpx;
+  background-color: whitesmoke;
 }
 

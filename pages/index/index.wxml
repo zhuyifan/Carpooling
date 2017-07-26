@@ -1,4 +1,7 @@
-<!--index.wxml-->  
+<!--index.wxml--> 
+<view class="picker">
+
+</view> 
 <view class="swiper-tab">  
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">车找人</view>
@@ -13,16 +16,22 @@
       </view>
       <view class="time" style="padding-top:10px;">
         <text>出发时间：{{item.date}} {{item.time}}</text>
+        <button class="wechat-copy" bindtap="copyWechat">复制微信号</button>
       </view>
       <view class="mode" style="padding-top:10px;">
-        <text>车型：{{item.mode}}</text>
+        <text>微信号：{{item.wechat}}</text>
+        
       </view>
       <view class="type">
-        <text>{{item.usertype}}/{{item.seat}}</text>
+        <text>{{item.usertype}}/{{item.mode}}/{{item.seat}}</text>
+        <button class="call" bindtap="callmeTap">拨打电话</button>
       </view>
       <view class="people">
         <image class="gender" src="/images/male.png"></image>
-        <text>{{item.name}}  {{item.phone}}</text>
+        <text>{{item.name}} {{item.phone}}</text>
+        
+      </view>
     </view>
-    </view>
+    <view class="divide">
+</view>
   </view>

@@ -4,6 +4,11 @@
       <input name="name" value="{{driverName}}" />
   </view>
 
+  <view class="title">微信号</view>
+  <view class="input">
+      <input name="wechat" value="{{wechatID}}" />
+  </view>
+
   <view class="title">手机</view>
   <view class="input">
     <view class="phone_code" style="width: 100px">
