@@ -57,17 +57,20 @@ Page({
           userInfo: userInfo
         })
         iniUserName = userInfo.nickName
-        console.log(userInfo.nickName)
+        console.log('???')
       })
 
       this.setData({
         userName: iniUserName
       })
     }
-    if(this.data.phoneNum.length <10||this.data.wechatId==""){
+    if(this.data.phoneNum.length <10){
       this.setData({
         phoneNum: ""
       })
+      var b = this.showCancel()
+    }
+    else if (this.data.wechatId=="") {
       var b = this.showCancel()
     }
     else{
