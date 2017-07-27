@@ -1,17 +1,16 @@
 /**index.wxss**/  
 .from-picker{
   position:absolute;
-  left:100rpx;
-  
-  padding-top:15rpx;
+  left:140rpx;
+  padding-top:25rpx;
   bottom: 15rpx;
   color:white;
   font-size: 30rpx;
 }
 .to-picker{
   position:absolute;
-  padding-top:15rpx;
-  right:100rpx;
+  padding-top:25rpx;
+  right:120rpx;
   color:white;
   bottom: 15rpx;
   font-size: 30rpx;
@@ -32,10 +31,10 @@
   padding-left:50%;
 }
 .swiper-tab{ 
-    width: 100%;  
-    border-bottom: 2rpx solid #777777;  
-    text-align: center;  
-    line-height: 80rpx;
+  width: 100%;  
+  border-bottom: 2rpx solid #777777;  
+  text-align: center;  
+  line-height: 65rpx;
   position: fixed;
   top: 40rpx;
   left: 0;
