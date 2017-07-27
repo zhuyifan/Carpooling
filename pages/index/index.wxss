@@ -2,30 +2,47 @@
 .from-picker{
   position:absolute;
   left:100rpx;
-  margin-top:-50rpx;
+  margin-top:-55rpx;
+  padding-top:15rpx;
   color:white;
   font-size: 30rpx;
 }
 .to-picker{
   position:absolute;
+  padding-top:15rpx;
   right:100rpx;
   color:white;
   font-size: 30rpx;
-  margin-top:-50rpx;
+  margin-top:-55rpx;
 }
 .picker{
-  background-color: #A61203;
+  background-color:#A61203;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40rpx;
+  box-sizing: border-box;
+  z-index: 100;
 }
 .arrow{
   color:white;
   margin-bottom:30rpx;
   padding-left:50%;
 }
-.swiper-tab{  
+.swiper-tab{ 
     width: 100%;  
     border-bottom: 2rpx solid #777777;  
     text-align: center;  
-    line-height: 80rpx;}  
+    line-height: 80rpx;
+  position: fixed;
+  top: 40rpx;
+  left: 0;
+  height: 70rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 100;
+} 
 .swiper-tab-list{  font-size: 30rpx;  
     display: inline-block;  
     width: 25%;  
@@ -38,6 +55,10 @@
 .swiper-box view{  
     text-align: center;  
 }  
+
+.bot{
+  margin-top:110rpx;
+}
 
 .title {
   padding-top: 25rpx;
@@ -101,4 +122,6 @@
   height: 20rpx;
   background-color: whitesmoke;
 }
+
+
 

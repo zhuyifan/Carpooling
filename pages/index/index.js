@@ -54,6 +54,28 @@ Page({
     });
 
   },
+
+  copyWechat:function(e){
+    var self = this;
+    wx.setClipboardData({
+      data: self.data.items.wechat,
+      success: function (res) {
+        // self.setData({copyTip:true}),  
+        wx.showModal({
+          title: '提示',
+          content: '复制成功',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('确定')
+            } else if (res.cancel) {
+              console.log('取消')
+            }
+          }
+        })
+      }
+    }); 
+  },
+
   bindStartChange: function (e) {
     console.log('index1 发生选择改变，携带值为', e.detail.value);
     this.setData({

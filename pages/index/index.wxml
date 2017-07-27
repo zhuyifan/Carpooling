@@ -1,5 +1,4 @@
 <!--index.wxml--> 
-
 <view class="picker">
 <text class="arrow">⇀</text>
   <picker class="from-picker" bindchange="bindStartChange" value="{{index1}}" range="{{location}}">
@@ -11,7 +10,7 @@
   </picker>  
 </view> 
 
-<view class="swiper-tab">  
+<scroll-view class="swiper-tab">  
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">车找人</view>
     <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">人找车</view> 
@@ -20,8 +19,9 @@
         <view class="date-select">{{da}}</view>
       </picker>
     </view>
-</view> 
+</scroll-view> 
 
+<view class="bot">
   <view class="card" wx:for="{{items}}">
     <view class="place">
       <view class="title">
@@ -32,7 +32,7 @@
         <button class="wechat-copy" bindtap="copyWechat">复制微信号</button>
       </view>
       <view class="mode" style="padding-top:10px;">
-        <text>微信号：{{item.wechat}}</text>
+        <text selectable="true">微信号：{{item.wechat}}</text>
       </view>
       <view class="type">
         <text>{{item.usertype}}/{{item.mode}}/{{item.seat}}</text>
@@ -45,4 +45,5 @@
     </view>
     <view class="divide">
 </view>
+  </view>
   </view>

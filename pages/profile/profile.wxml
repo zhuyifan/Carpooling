@@ -4,7 +4,7 @@
     <view class="divider">
       <text class="label"></text>姓名
       <input name="userInfo"  
-      class="form-input" placeholder="{{userInfo.nickName}}" 
+      class="form-input" value="{{userInfo.nickName}}" 
       bindinput="nameChange"
       align="right"/>
     </view>
