@@ -32,10 +32,10 @@
   padding-left:50%;
 }
 .swiper-tab{ 
-    width: 100%;  
-    border-bottom: 2rpx solid #777777;  
-    text-align: center;  
-    line-height: 80rpx;
+  width: 100%;  
+  border-bottom: 2rpx solid #777777;  
+  text-align: center;  
+  line-height: 65rpx;
   position: fixed;
   top: 40rpx;
   left: 0;

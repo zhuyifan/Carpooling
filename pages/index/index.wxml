@@ -2,15 +2,15 @@
 <view class="picker">
 <text class="arrow">⇀</text>
   <picker class="from-picker" bindchange="bindStartChange" value="{{index1}}" range="{{location}}">
-            <view class="place-select">{{location[index1]}}</view>
+            <view class="place-select">{{location[index1]}} ▾</view>
   </picker> 
   
   <picker class="to-picker" bindchange="bindEndChange" value="{{index2}}" range="{{location}}">
-            <view class="place-select">{{location[index2]}}</view>
+            <view class="place-select">{{location[index2]}} ▾</view>
   </picker>  
 </view> 
 
-<scroll-view class="swiper-tab">  
+<view class="swiper-tab">  
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">车找人</view>
     <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">人找车</view> 
@@ -19,7 +19,7 @@
         <view class="date-select">{{da}}</view>
       </picker>
     </view>
-</scroll-view> 
+</view> 
 
 <scroll-view class="bot" scroll-y = true>
   <view class="card" wx:for="{{items}}">
