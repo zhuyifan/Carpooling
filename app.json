@@ -12,8 +12,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#A61203",
     "navigationBarTitleText": "Umass拼车",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh":true
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#a9b7b7",
