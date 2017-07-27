@@ -108,9 +108,21 @@ Page({
     })
   }, 
 
-  onShow:function(){
-    console.log(app.globalData)
+  onPullDownRefresh: function () {
+    // Do something when pull down.
+    console.log('刷新');
   },
+
+  onPullDownRefresh: function () {
+    // Do something when pull down.
+    console.log('刷新');
+  },
+
+  onReachBottom: function () {
+    // Do something when page reach bottom.
+    console.log('circle 下一页');
+  },
+
   /** 
      * 滑动切换tab 
      */

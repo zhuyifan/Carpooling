@@ -2,8 +2,9 @@
 .from-picker{
   position:absolute;
   left:100rpx;
-  margin-top:-55rpx;
+  
   padding-top:15rpx;
+  bottom: 15rpx;
   color:white;
   font-size: 30rpx;
 }
@@ -12,8 +13,8 @@
   padding-top:15rpx;
   right:100rpx;
   color:white;
+  bottom: 15rpx;
   font-size: 30rpx;
-  margin-top:-55rpx;
 }
 .picker{
   background-color:#A61203;
@@ -21,7 +22,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 40rpx;
+  height: 50rpx;
   box-sizing: border-box;
   z-index: 100;
 }

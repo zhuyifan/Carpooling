@@ -21,7 +21,7 @@
     </view>
 </scroll-view> 
 
-<view class="bot">
+<scroll-view class="bot" scroll-y = true>
   <view class="card" wx:for="{{items}}">
     <view class="place">
       <view class="title">
@@ -46,4 +46,4 @@
     <view class="divide">
 </view>
   </view>
-  </view>
+  </scroll-view>
