@@ -21,7 +21,6 @@
 
   <view class="title">手机号</view>
   <view class="input">
-      <text class="label">手机号</text>
       <input type="number" name="phoneNum" class="form-input" placeholder="必填"
       align= "right" bindinput="numChange"/>
   </view>
