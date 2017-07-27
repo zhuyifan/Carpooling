@@ -56,7 +56,6 @@ App({
     phoneNum: "",
     wechatId: "",
     carModel: "",
-    email: "",
     gender: "",
     time: currenttime,
     date: currentdate

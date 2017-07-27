@@ -1,10 +1,28 @@
 /* profile.wxss */
-.form-input {
-  display:inline-flex;
-  margin-top:50rpx;
-  margin-left: 250rpx;
-  /*align-items: flex-end;*/
+.page {
+  min-height: 100%;
+  flex: 1;
+  background-color: #FBF9FE;
+  font-size: 40rpx;
 }
+
+.input{
+  background-color: white;
+  height:70rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black;
+}
+.title{
+  height:60rpx;
+  margin-left: 25rpx;
+  padding-top:20rpx;
+  font-size: 30rpx;
+  color: lightslategrey;
+}
+
 
 .submit {
   padding-left: 30rpx;
@@ -22,10 +40,6 @@
   padding-left: 10rpx;
 }
 
-.divider {
-  border-bottom: 3rpx solid darkgray;
-  padding-bottom: 50rpx;
-}
 
 
 
