@@ -19,12 +19,6 @@
       </radio-group>
     </view>
 
-    <view class="divider">
-      <text class="label">邮箱</text>
-      <input name="email" class="form-input" placeholder="@umass.edu"
-      align= "right" bindinput="emailChange" auto-focus/>
-  </view>
-
 
   <view class="divider">
       <text class="label">手机号</text>

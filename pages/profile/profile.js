@@ -15,7 +15,6 @@ Page({
     userName: "",
     phoneNum: "",
     wechatId: "",
-    email: "",
     gender: 'male'
   },
 
@@ -48,13 +47,6 @@ Page({
     console.log('id：', e.detail.value)
   },
 
-  emailChange: function (e) {
-    this.setData({
-      email: e.detail.value
-    })
-    console.log('email：', e.detail.value)
-  },
-
   submit: function(){
     if(this.data.userName == ""){
       var that = this
@@ -72,7 +64,7 @@ Page({
         userName: iniUserName
       })
     }
-    if(this.data.phoneNum.length <10){
+    if(this.data.phoneNum.length <10||this.data.wechatId==""){
       this.setData({
         phoneNum: ""
       })
@@ -87,7 +79,6 @@ Page({
       app.globalData.userName = this.data.userName
       app.globalData.gender = this.data.gender
       app.globalData.wechatId = this.data.wechatId
-      app.globalData.email = this.data.email
       app.globalData.phoneNum = this.data.phoneNum
 
       console.log(this.data)
@@ -112,7 +103,7 @@ Page({
 
   showCancel: function () {
     wx.showToast({
-      title: '请正确填写信息',
+      title: '请填写必填信息',
       icon: 'loading'
     });
   },
