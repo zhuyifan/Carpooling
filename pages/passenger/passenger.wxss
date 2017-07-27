@@ -48,3 +48,15 @@
   outline-color: black; */
   margin-left:350rpx;
 }
+
+.submitbtn {
+  color: white;
+  background-color: #A61203; 
+  width: 600rpx;
+} 
+  
+.btn{
+  background-color: #FBF9FE;
+  padding-top:80rpx;
+  padding-bottom:100rpx;
+}

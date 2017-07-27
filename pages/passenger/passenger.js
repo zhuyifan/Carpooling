@@ -14,14 +14,39 @@ Page({
     gender: 'male',
     date: currentdate,
     time: currenttime,
-    start:"",
-    end: "",
+    start:"Amherst",
+    end: "Amherst",
     bag: "",
     view: 'APP',
-    nop:["1","2","3","4"],
+    nop:["1","2","3","4","5"],
     nopIndex: 0,
     countryCodes: ["+1", "+86"],
-    countryCodeIndex: 0
+    countryCodeIndex: 0,
+
+    location: ["Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
+    index1: 0,
+    index2: 0,
+  },
+
+  
+
+  bindStartChange: function (e) {
+    console.log('index1 发生选择改变，携带值为', e.detail.value);
+    this.setData({
+      index1: e.detail.value,
+    })
+    this.data.start = this.data.location[this.data.index1]
+    console.log('出发地城市为 ', this.data.start)
+  },
+
+  bindEndChange: function (e) {
+    console.log('index2 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      index2: e.detail.value
+    })
+    this.data.end = this.data.location[this.data.index2]
+    console.log('目的地城市为 ', this.data.end)
   },
 
   bindCountryCodeChange: function (e) {
