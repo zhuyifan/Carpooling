@@ -1,19 +1,19 @@
 /**index.wxss**/  
 .from-picker{
   position:absolute;
-  left:140rpx;
+  left:120rpx;
   padding-top:25rpx;
   bottom: 15rpx;
   color:white;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
 .to-picker{
   position:absolute;
   padding-top:25rpx;
-  right:120rpx;
+  right:90rpx;
   color:white;
   bottom: 15rpx;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
 .picker{
   background-color:#A61203;
@@ -36,7 +36,7 @@
   text-align: center;  
   line-height: 65rpx;
   position: fixed;
-  top: 40rpx;
+  top: 60rpx;
   left: 0;
   height: 70rpx;
   background-color: #fff;
@@ -57,7 +57,7 @@
 }  
 
 .bot{
-  margin-top:110rpx;
+  margin-top:130rpx;
 }
 
 .title {
