@@ -1,4 +1,4 @@
-/* pages/passenger/passenger.wxss */
+s/* pages/passenger/passenger.wxss */
 .page {
   min-height: 100%;
   flex: 1;
