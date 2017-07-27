@@ -2,11 +2,11 @@
 <view class="picker">
 <text class="arrow">⇀</text>
   <picker class="from-picker" bindchange="bindStartChange" value="{{index1}}" range="{{location}}">
-            <view class="place-select">{{location[index1]}} ▾</view>
+            <view class="place-select">{{location[index1]}}</view>
   </picker> 
   
   <picker class="to-picker" bindchange="bindEndChange" value="{{index2}}" range="{{location}}">
-            <view class="place-select">{{location[index2]}} ▾</view>
+            <view class="place-select">{{location[index2]}}</view>
   </picker>  
 </view> 
 
