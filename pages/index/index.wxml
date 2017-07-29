@@ -2,11 +2,21 @@
 <view class="picker">
 <text class="arrow">⇀</text>
   <picker class="from-picker" bindchange="bindStartChange" value="{{index1}}" range="{{location}}">
-            <view class="place-select">{{location[index1]}} ▾</view>
+    <view wx:if="{{condition0}}">
+      <view class="place-select">{{location[index1]}}</view>       
+    </view>
+    <view wx:else>
+      <view class="place-select">始发地</view>        
+    </view>
   </picker> 
   
   <picker class="to-picker" bindchange="bindEndChange" value="{{index2}}" range="{{location}}">
-            <view class="place-select">{{location[index2]}} ▾</view>
+    <view wx:if="{{condition1}}">
+      <view class="place-select">{{location[index2]}}</view>       
+    </view>
+    <view wx:else>
+      <view class="place-select">目的地</view>        
+    </view>
   </picker>  
 </view> 
 
@@ -25,22 +35,22 @@
   <view class="card" wx:for="{{items}}">
     <view class="place">
       <view class="title">
-        <text class="shifa">{{item.qidian}} ➔ {{item.zhongdian}}</text>
+        <text class="shifa">{{item.start}} ➔ {{item.end}}</text>
       </view>
       <view class="time" style="padding-top:10px;">
         <text>出发时间：{{item.date}} {{item.time}}</text>
         <button class="wechat-copy" bindtap="copyWechat">复制微信号</button>
       </view>
       <view class="mode" style="padding-top:10px;">
-        <text selectable="true">微信号：{{item.wechat}}</text>
+        <text selectable="true">微信号：{{item.wechatId}}</text>
       </view>
       <view class="type">
-        <text>{{item.usertype}}/{{item.mode}}/{{item.seat}}</text>
+        <text>{{item.usertype}}/{{item.mode}}/{{item.remainedSeat}}</text>
         <button class="call" bindtap="callmeTap">拨打电话</button>
       </view>
       <view class="people">
         <image class="gender" src="/images/male.png"></image>
-        <text>{{item.name}} {{item.phone}}</text>
+        <text>{{item.name}} {{item.phoneNum}}</text>
       </view>
     </view>
     <view class="divide">

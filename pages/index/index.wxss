@@ -5,7 +5,7 @@
   padding-top:25rpx;
   bottom: 15rpx;
   color:white;
-  font-size: 35rpx;
+  font-size: 30rpx;
 }
 .to-picker{
   position:absolute;
@@ -13,7 +13,7 @@
   right:90rpx;
   color:white;
   bottom: 15rpx;
-  font-size: 35rpx;
+  font-size: 30rpx;
 }
 .picker{
   background-color:#A61203;

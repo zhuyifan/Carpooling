@@ -99,12 +99,40 @@ Page({
     })
   },
 
+  submit: function () {
+    if (this.data.start == this.data.end) {
+      wx.showModal({
+        title: '别搞事',
+        content: '出发地与目的地不可一致',
+        showCancel: false,
+      })
+    }
+    else {
+      this.showSuccess()
+      var b = setTimeout(this.back, 1000)
+    }
+    console.log(this.data)
+  },
+
+  back: function () {
+    wx.navigateBack({
+      url: '../add/add'
+    })
+  },
+
+  showSuccess: function () {
+    wx.showToast({
+      title: '提交成功',
+      icon: 'success',
+    });
+  },
+
   /**
   * 生命周期函数--监听页面加载
   */
   onLoad: function (options) {
     this.setData({
-      driverName: app.globalData.userName,
+      userName: app.globalData.userName,
       phoneNum: app.globalData.phoneNum,
       gender: app.globalData.gender,
       wechatID: app.globalData.wechatId
@@ -124,7 +152,7 @@ Page({
    */
   onShow: function () {
     console.log(this.data)
-    if (this.data.driverName == "") {
+    if (this.data.userName == "") {
       wx.showModal({
         title: '不给你进',
         content: '还没填写个人信息哦',

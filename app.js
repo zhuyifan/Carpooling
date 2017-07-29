@@ -55,13 +55,28 @@ App({
     userName: "",
     phoneNum: "",
     wechatId: "",
-    carModel: "",
     gender: "",
     time: currenttime,
-    date: currentdate
+    date: currentdate,
+    items: [
+      {
+        name: "刁豫东",
+        phoneNum: 4139945357,
+        wechatId: "yudongdiao2",
+        start: "BDL",
+        date: "2017-8-9",
+        time: "18:00",
+        end: "Amherst",
+        usertype: "人找车",
+        mode: "miniBus",
+        remainedSeat: "2人",
+        id: "0"
+      },
+    ],
   },
 
   onShow: function(){
     console.log(this.globalData)
   },
+
 })

@@ -9,13 +9,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-      driverName:"",
-      gender:"",
+      user:{
+        name: "",
+        phoneNum: "",
+        wechatId:"",
+        start:"Amherst",
+        date:currentdate,
+        time:currenttime,
+        end:"Amherst",
+        usertype:"driver",
+        mode:"Sedan",
+        remainedSeat: "1",
+        id:""
+      },
+      
+      name:"",
       phoneNum:"",
-      remainedSeat:"",
+      wechatId:"",
+
+      gender:"",
       start:"Amherst",
       end:"Amherst",
-      mod: "轿车",
+      mode: "轿车",
       tempFilePaths:'',
       condition: false,
       date: currentdate,
@@ -33,7 +48,7 @@ Page({
       model: ["Sedan", "SUV", "MPV", "BPV", "MINIBUS","Coupe"],
       index: 0,
 
-      seat:[1, 2, 3, 4, 5, 6],
+      seat:["1", "2", "3", "4", "5", "6"],
       index0: 0
     
   },
@@ -54,50 +69,41 @@ Page({
   },
   
   bindCountryCodeChange: function (e) {
-    console.log('picker country code 发生选择改变，携带值为', e.detail.value);
-
     this.setData({
       countryCodeIndex: e.detail.value
     })
   },
 
   bindSeatChange: function (e) {
-    console.log('index0 code 发生选择改变，携带值为', e.detail.value);
-
     this.setData({
       index0: e.detail.value
     })
-    this.data.remainedSeat = this.data.seat[this.data.index0];
-    console.log('remained seat is ', this.data.remainedSeat);
+    this.data.user.remainedSeat = this.data.seat[this.data.index0];
+    console.log('remained seat is ', this.data.user.remainedSeat);
   },
 
   bindModelChange: function (e) {
-    console.log('index 发生选择改变，携带值为', e.detail.value);
-
     this.setData({
       index: e.detail.value
     })
-    this.data.mod = this.data.model[this.data.index]
-    console.log('车型为 ', this.data.mod)
+    this.data.user.mode = this.data.model[this.data.index]
+    console.log('车型为 ', this.data.user.mode)
   },
 
   bindStartChange: function (e) {
-    console.log('index1 发生选择改变，携带值为', e.detail.value);
     this.setData({
       index1: e.detail.value,
     })
-    this.data.start = this.data.location[this.data.index1]
-    console.log('出发地城市为 ',this.data.start)
+    this.data.user.start = this.data.location[this.data.index1]
+    console.log('出发地城市为 ', this.data.user.start)
   },
 
   bindEndChange: function (e) {
-    console.log('index2 发生选择改变，携带值为', e.detail.value);
-
     this.setData({
       index2: e.detail.value
     })
-    this.data.end = this.data.location[this.data.index2]
-    console.log('目的地城市为 ', this.data.end)
+    this.data.user.end = this.data.location[this.data.index2]
+    console.log('目的地城市为 ', this.data.user.end)
   },
 
   bindDateChange: function (e) {
@@ -113,24 +119,40 @@ Page({
     console.log('time is ', e.detail.value)
   },
 
-  submit: function () {
-    if(this.data.start==this.data.end){
+  submit: function (e) {
+    if (this.data.user.start == this.data.user.end) {
       wx.showModal({
         title: '别搞事',
         content: '出发地与目的地不可一致',
         showCancel: false,
       })
     }
-    else{
+    else {
+      console.log(app.globalData.items)
+      var data = this.data.user
+      app.globalData.items[0] = data
+      console.log(app.globalData.items[0])
+      console.log(app.globalData.items)
+      console.log(app.globalData)
+      // app.globalData.items = this;
+      // app.globalData.items[app.globalData.items.length].phoneNum = this.data.phoneNum;
+      // app.globalData.items[app.globalData.items.length].remainedSeat = this.data.remainedSeat;
+      // app.globalData.items[app.globalData.items.length].start = this.data.start;
+      // app.globalData.items[app.globalData.items.length].time = this.data.time;
+      // app.globalData.items[app.globalData.items.length].date = this.data.date;
+      // app.globalData.items[app.globalData.items.length].end = this.data.end;
+      // app.globalData.items[app.globalData.items.length].usertype = this.data.usertype;
+      // app.globalData.items[app.globalData.items.length].mod = this.data.mod;
+      // app.globalData.items[app.globalData.items.length].key = app.globalData.items.length;
       this.showSuccess()
-      var b = setTimeout(this.back,1000)
+      var b = setTimeout(this.back, 1000)
     }
-    console.log(this.data)
+    // console.log(obj)
   },
 
-  back: function(){
-    wx.navigateBack({
-      url: '../add/add'
+  back: function () {
+    wx.switchTab({
+      url: '../index/index',
     })
   },
 
@@ -145,12 +167,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      driverName: app.globalData.userName,
-      phoneNum: app.globalData.phoneNum,
-      gender: app.globalData.gender,
-      wechatID: app.globalData.wechatId
-    })
+      this.setData({
+        name: app.globalData.userName,
+        phoneNum: app.globalData.phoneNum,
+        gender: app.globalData.gender,
+        wechatId: app.globalData.wechatId
+      })
+      this.data.user.name = app.globalData.userName,
+      this.data.user.phoneNum = app.globalData.phoneNum,
+      this.data.user.gender = app.globalData.gender,
+      this.data.user.wechatId = app.globalData.wechatId
     console.log(currentdate)
   },
 
@@ -165,8 +191,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(this.data)
-    if(this.data.driverName==""){
+    if (this.data.user.name==""){
       wx.showModal({
         title: '不给你进',
         content: '还没填写个人信息哦',

@@ -1,6 +1,6 @@
 <!--profile.wxml-->
 <view class="page">
-
+  <form>
     <view class="title">姓名</view>
     <view class="input">  
       <input name="userInfo"  
@@ -19,20 +19,22 @@
     </view>
 
 
-  <view class="title">手机号</view>
-  <view class="input">
+    <view class="title">手机号</view>
+    <view class="input">
       <input type="number" name="phoneNum" class="form-input" placeholder="必填"
-      align= "right" bindinput="numChange"/>
-  </view>
+        align= "right" bindinput="numChange"/>
+    </view>
 
-  <view class="title">微信号</view>
-  <view class="input">
+    <view class="title">微信号</view>
+    <view class="input">
       <input name="wechatId" class="form-input" placeholder="必填"
       align= "right" bindinput="idChange"/>
-  </view>
+    </view>
   
-  <view class="submit">
-    <button class="submitbtn" color="green" bindtap="submit">修改并储存</button>
-  </view>
+    <view class="submit">
+      <button class="submitbtn" color="green" bindtap="submit">修改并储存</button>
+    </view>
+
+  </form>
 
 </view>

@@ -9,7 +9,7 @@
 <view class="page">
   <view class="title">姓名</view>
   <view class="input">
-      <input name="userInfo" placeholder="{{userInfo.nickName}}" 
+      <input name="userInfo" value="{{userName}}" 
       bindinput="nameChange"/>
   </view>
 
@@ -25,7 +25,7 @@
             <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
         </picker> 
       </view>
-      <input class="driver-input" placeholder="请输入号码" bindinput="numChange"/>
+      <input class="driver-input" value="{{phoneNum}}" bindinput="numChange"/>
   </view>
 
   <view class="title">乘客人数</view>

@@ -12,17 +12,10 @@ Page({
     winHeight: 0,
     // tab切换  
     currentTab: 0,
-    
-    
 
-    items: [
-      { name:"刁豫东", phone:4139945357, wechat:"yudongdiao2", qidian:"BDL", date:"2017-8-9", time:"18:00", zhongdian:"Amherst", usertype:"人找车", mode:"miniBus", seat:"2人"},
-      { name: "刁豫西", phone: 4139926367, wechat: "yudongdiao2", qidian: "Logan", date: "2017-7-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", mode: "SUV", seat: "2人"},
-      { name: "刁豫南", phone: 4139926367, wechat: "yudongdiao2", qidian: "Boston", date: "2017-8-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "Coupe", seat: "3空位"},
-      { name: "刁豫北", phone: 4139926367, wechat: "yudongdiao2", qidian: "Amherst", date: "2017-9-9", time: "18:00", zhongdian: "BDL", usertype: "车找人", mode: "SUV", seat: "2空位"},
-      { name: "刁豫东北", phone: 4139926367, wechat: "yudongdiao2", qidian: "JFK", date: "2017-9-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", mode: "Sedan", seat: "1人"},
-      { name: "刁豫西南", phone: 4139926367, wechat: "yudongdiao2", qidian: "Boston", date: "2017-10-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "SUV", seat: "2空位"},
-    ],
+    items:app.globalData.items,
+
+    itemsIndex:0,
 
     location: ["Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
     index1: 0,
@@ -34,6 +27,8 @@ Page({
     start: "Amherst",
     end: "Amherst",
 
+    condition0:false,
+    condition1:false,
     
   },
   onLoad: function () {
@@ -80,6 +75,7 @@ Page({
     console.log('index1 发生选择改变，携带值为', e.detail.value);
     this.setData({
       index1: e.detail.value,
+      condition0:true,
     })
     this.data.start = this.data.location[this.data.index1]
     console.log('出发地城市为 ', this.data.start)
@@ -89,7 +85,8 @@ Page({
     console.log('index2 发生选择改变，携带值为', e.detail.value);
 
     this.setData({
-      index2: e.detail.value
+      index2: e.detail.value,
+      condition1:true,
     })
     this.data.end = this.data.location[this.data.index2]
     console.log('目的地城市为 ', this.data.end)
