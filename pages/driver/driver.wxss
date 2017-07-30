@@ -94,6 +94,11 @@
   outline-color: black;
 }
 
+.info{
+  position:absolute;
+  right:0;
+}
+
 
 
 

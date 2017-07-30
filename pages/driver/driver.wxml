@@ -71,7 +71,8 @@
       </picker>
     </view>
 
-    <view class="title">价格</view>
+    <view class="title">价格<icon class="info" bindtap="openAlert" type="info_circle" size="23"></icon></view>
+
   <view class="input">
       <input name="price" type="number"/>
       <text class="unit">美元/人</text>

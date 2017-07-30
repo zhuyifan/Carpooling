@@ -154,6 +154,18 @@ Page({
     console.log(currentdate)
   },
 
+  openAlert: function () {
+    wx.showModal({
+      content: '建议价格：Amherst-Boston:$35-$50 Amherst-NYC:$50-$65 Amherst-BDL:$20-$30',
+      showCancel: false,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    });
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
