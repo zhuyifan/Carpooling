@@ -122,26 +122,26 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    console.log(this.data)
-    if (this.data.driverName == "") {
-      wx.showModal({
-        title: '不给你进',
-        content: '还没填写个人信息哦',
-        showCancel: false,
-        success: function (res) {
-          if (res.confirm) {
-            console.log('用户点击确定')
-            wx.navigateBack({
-              url: '../add/add'
-            })
-          } else if (res.cancel) {
-            console.log('用户点击取消')
-          }
-        }
-      })
-    }
-  },
+  // onShow: function () {
+  //   console.log(this.data)
+  //   if (this.data.driverName == "") {
+  //     wx.showModal({
+  //       title: '不给你进',
+  //       content: '还没填写个人信息哦',
+  //       showCancel: false,
+  //       success: function (res) {
+  //         if (res.confirm) {
+  //           console.log('用户点击确定')
+  //           wx.navigateBack({
+  //             url: '../add/add'
+  //           })
+  //         } else if (res.cancel) {
+  //           console.log('用户点击取消')
+  //         }
+  //       }
+  //     })
+  //   }
+  // },
 
   /**
    * 生命周期函数--监听页面隐藏

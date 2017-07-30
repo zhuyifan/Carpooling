@@ -68,6 +68,11 @@
         <view class="time-select">{{time}}</view>
       </picker>
     </view>
+
+    <view class="title">备注</view>
+  <view class="comment">
+      <textarea  placeholder="例如：可否议价，行李箱大小" auto-height/>
+  </view>
  <view class="btn">
       <button class="submitbtn" color="green" bindtap="submit">发布</button>
     </view> 

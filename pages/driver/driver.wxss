@@ -77,4 +77,25 @@
     margin-top:-80rpx;
 }
 
+.unit{
+  position:absolute;
+  top:1575rpx;
+  right:0;
+  color:lightslategrey;
+}
+
+.comment{
+  background-color: white;
+  height:140rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black;
+}
+
+
+
+
+
 

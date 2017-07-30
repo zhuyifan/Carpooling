@@ -60,3 +60,13 @@
   padding-top:80rpx;
   padding-bottom:100rpx;
 }
+
+.comment{
+  background-color: white;
+  height:140rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black;
+}
