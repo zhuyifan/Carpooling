@@ -24,15 +24,15 @@ Page({
       { name: "刁豫西南", phone: 4139926367, wechat: "yudongdiao2", qidian: "Boston", date: "2017-10-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "SUV", seat: "2空位"},
     ],
 
-    location: ["Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
+    location: ["All", "Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
     index1: 0,
     index2: 0,
 
     da:currentdate,
     curdate: currentdate,
 
-    start: "Amherst",
-    end: "Amherst",
+    start: "All",
+    end: "All",
 
     
   },

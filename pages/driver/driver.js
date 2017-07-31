@@ -156,7 +156,7 @@ Page({
 
   openAlert: function () {
     wx.showModal({
-      content: '建议价格：Amherst-Boston:$35-$50 Amherst-NYC:$50-$65 Amherst-BDL:$20-$30',
+      content: '建议价格：Amherst往返Boston为35美元/人到50美元/人，Amherst往返NYC为50美元/人到65美元/人，Amherst往返BDL为20美元/人到30美元/人',
       showCancel: false,
       success: function (res) {
         if (res.confirm) {

@@ -79,8 +79,8 @@
 
 .unit{
   position:absolute;
-  top:1575rpx;
   right:0;
+  margin-top:-50rpx;
   color:lightslategrey;
 }
 
