@@ -21,6 +21,8 @@ Page({
       date: currentdate,
       curdate:currentdate,
       time: currenttime,
+      price:"",
+      comment:"",
 
       countryCodes: ["+1", "+86"],
       countryCodeIndex: 0,

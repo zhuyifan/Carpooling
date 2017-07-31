@@ -9,6 +9,8 @@
       "mod":"",
       "date":"",
       "time":"",
-      "remainedSeat":""
+      "remainedSeat":"",
+      "price":"",
+      "comment":""
   }
 }
