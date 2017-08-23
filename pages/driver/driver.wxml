@@ -19,14 +19,13 @@
     <input class="driver-input" type="number" value="{{phoneNum}}" />
   </view>
 
-   <view class="title">车型以及照片</view>
+   <view class="title">车型</view>
     <view class="input">
-    <view class="type_car" style="width: 100px">
+    <view class="type_car">
       <picker bindchange="bindModelChange" value="{{index}}" range="{{model}}">
-          <view class="driver-select">{{model[index]}}</view>
+          <view>{{model[index]}}</view>
       </picker> 
-     </view>
-    <button class="uploadImage" plain="true" bindtap="chooseimage" style="color: blue;border-style:none">选择图片</button>  
+     </view> 
   </view>
   <view wx:if="{{condition}}" style="text-align:center;margin-top:20rpx;">
     <image src="{{tempFilePaths }}" mode="aspecFill" style="width: 80%; height: 350rpx"/>
@@ -71,6 +70,18 @@
         <view class="time-select">{{time}}</view>
       </picker>
     </view>
+
+    <view class="title">价格<icon class="info" bindtap="openAlert" type="info_circle" size="23"></icon></view>
+
+  <view class="input">
+      <input name="price" type="number"/>
+      <text class="unit">美元/人</text>
+  </view>
+
+  <view class="title">备注</view>
+  <view class="comment">
+      <textarea  placeholder="例如：可否议价，行李箱大小" auto-height/>
+  </view>
 </view>
 
  <view class="btn">

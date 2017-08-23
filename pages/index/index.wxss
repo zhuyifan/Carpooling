@@ -36,7 +36,7 @@
   text-align: center;  
   line-height: 65rpx;
   position: fixed;
-  top: 60rpx;
+  top: 50rpx;
   left: 0;
   height: 70rpx;
   background-color: #fff;
