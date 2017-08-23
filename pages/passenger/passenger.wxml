@@ -9,7 +9,7 @@
 <view class="page">
   <view class="title">姓名</view>
   <view class="input">
-      <input name="userInfo" placeholder="{{userInfo.nickName}}" 
+      <input name="userInfo" value="{{userName}}"
       bindinput="nameChange"/>
   </view>
 
@@ -25,7 +25,7 @@
             <view class="driver-select">{{countryCodes[countryCodeIndex]}}</view>
         </picker> 
       </view>
-      <input class="driver-input" placeholder="请输入号码" bindinput="numChange"/>
+      <input class="driver-input" value="{{phoneNum}}" bindinput="numChange"/>
   </view>
 
   <view class="title">乘客人数</view>
@@ -71,7 +71,7 @@
 
     <view class="title">备注</view>
   <view class="comment">
-      <textarea  placeholder="例如：可否议价，行李箱大小" auto-height/>
+      <textarea  bindinput="commentChange" placeholder="例如：有多少行李箱" auto-height/>
   </view>
  <view class="btn">
       <button class="submitbtn" color="green" bindtap="submit">发布</button>

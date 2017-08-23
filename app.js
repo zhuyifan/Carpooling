@@ -1,4 +1,6 @@
 //app.js
+var Bmob = require('utils/bmob.js');
+Bmob.initialize("aea8e82518e382017fc72a9a784e8171", "6ad115673fe8c6685927166f0727e619");
 var date = new Date();
 var hyphen = "-";
 var colon = ":";

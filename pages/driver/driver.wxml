@@ -74,13 +74,13 @@
     <view class="title">价格<icon class="info" bindtap="openAlert" type="info_circle" size="23"></icon></view>
 
   <view class="input">
-      <input name="price" type="number"/>
+      <input name="price" type="number"  bindinput="priceChange"/>
       <text class="unit">美元/人</text>
   </view>
 
   <view class="title">备注</view>
   <view class="comment">
-      <textarea  placeholder="例如：可否议价，行李箱大小" auto-height/>
+      <textarea  bindinput="commentChange" placeholder="例如：可否议价，行李箱大小" auto-height/>
   </view>
 </view>
 

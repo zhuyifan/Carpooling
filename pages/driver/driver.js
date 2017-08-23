@@ -1,4 +1,5 @@
 // pages/driver/driver.js
+var Bmob = require('../../utils/bmob.js');
 var app = getApp();
 var currenttime = app.globalData.time;
 var currentdate = app.globalData.date;
@@ -12,7 +13,7 @@ Page({
       driverName:"",
       gender:"",
       phoneNum:"",
-      remainedSeat:"",
+      remainedSeat:1,
       start:"Amherst",
       end:"Amherst",
       mod: "轿车",
@@ -25,7 +26,7 @@ Page({
       comment:"",
 
       countryCodes: ["+1", "+86"],
-      countryCodeIndex: 0,
+      countryCodeIndex: "0",
 
 
       location: ["Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
@@ -115,6 +116,22 @@ Page({
     console.log('time is ', e.detail.value)
   },
 
+  priceChange: function (e) {
+    this.setData({
+      price: e.detail.value
+    })
+
+    console.log('price：', e.detail.value)
+  },
+
+  commentChange: function (e) {
+    this.setData({
+      comment: e.detail.value
+    })
+
+    console.log('comment：', e.detail.value)
+  },
+
   submit: function () {
     if(this.data.start==this.data.end){
       wx.showModal({
@@ -123,7 +140,41 @@ Page({
         showCancel: false,
       })
     }
+    if(this.data.price==""){
+      wx.showModal({
+        title: '别搞事',
+        content: '你没写价格哦',
+        showCancel: false,
+      })
+    }
     else{
+      var Diary = Bmob.Object.extend("event_data");
+      var event_data = new Diary();
+      event_data.set("person", "driver");
+      event_data.set("name", app.globalData.userName);
+      event_data.set("gender", app.globalData.gender);
+      event_data.set("wechat", app.globalData.wechatId);
+      event_data.set("countrycode", this.data.countryCodeIndex);
+      event_data.set("phone", this.data.phoneNum);
+      event_data.set("mode", this.data.mod);
+      event_data.set("seat", this.data.remainedSeat);
+      event_data.set("from", this.data.start);
+      event_data.set("to", this.data.end);
+      event_data.set("date", this.data.date);
+      event_data.set("time", this.data.time);
+      event_data.set("price", this.data.price);
+      event_data.set("comment", this.data.comment);
+      //添加数据，第一个入口参数是null
+      event_data.save(null, {
+        success: function (result) {
+          // 添加成功，返回成功之后的objectId（注意：返回的属性名字是id，不是objectId），你还可以在Bmob的Web管理后台看到对应的数据
+          console.log("日记创建成功, objectId:" + result.id);
+        },
+        error: function (result, error) {
+          // 添加失败
+          console.log('创建日记失败');
+        }
+      });
       this.showSuccess()
       var b = setTimeout(this.back,1000)
     }
@@ -178,26 +229,26 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  // onShow: function () {
-  //   console.log(this.data)
-  //   if(this.data.driverName==""){
-  //     wx.showModal({
-  //       title: '不给你进',
-  //       content: '还没填写个人信息哦',
-  //       showCancel: false,
-  //       success: function (res) {
-  //         if (res.confirm) {
-  //           console.log('用户点击确定')
-  //           wx.navigateBack({
-  //             url: '../add/add'
-  //           })
-  //         } else if (res.cancel) {
-  //           console.log('用户点击取消')
-  //         }
-  //       }
-  //     })
-  //   }
-  // },
+  onShow: function () {
+    console.log(this.data)
+    if(this.data.driverName==""){
+      wx.showModal({
+        title: '不给你进',
+        content: '还没填写个人信息哦',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateBack({
+              url: '../add/add'
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
