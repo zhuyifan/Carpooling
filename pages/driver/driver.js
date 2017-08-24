@@ -36,7 +36,7 @@ Page({
       model: ["Sedan", "SUV", "MPV", "BPV", "MINIBUS","Coupe"],
       index: 0,
 
-      seat:[1, 2, 3, 4, 5, 6],
+      seat:["1", "2", "3", "4", "5", "6"],
       index0: 0
     
   },
@@ -140,7 +140,7 @@ Page({
         showCancel: false,
       })
     }
-    if(this.data.price==""){
+    else if(this.data.price==""){
       wx.showModal({
         title: '别搞事',
         content: '你没写价格哦',
@@ -150,14 +150,14 @@ Page({
     else{
       var Diary = Bmob.Object.extend("event_data");
       var event_data = new Diary();
-      event_data.set("person", "driver");
+      event_data.set("person", "车找人");
       event_data.set("name", app.globalData.userName);
       event_data.set("gender", app.globalData.gender);
       event_data.set("wechat", app.globalData.wechatId);
       event_data.set("countrycode", this.data.countryCodeIndex);
       event_data.set("phone", this.data.phoneNum);
       event_data.set("mode", this.data.mod);
-      event_data.set("seat", this.data.remainedSeat);
+      event_data.set("seat", this.data.remainedSeat+"空位");
       event_data.set("from", this.data.start);
       event_data.set("to", this.data.end);
       event_data.set("date", this.data.date);

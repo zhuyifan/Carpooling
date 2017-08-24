@@ -15,7 +15,7 @@
         <button class="profile" plain="true">我的发布</button>
       </view>
       <view class="group">
-        <button class="profile" plain="true">加入拼车群</button>
+        <button class="profile" plain="true">提出建议</button>
       </view>
     </ul>
 </view>

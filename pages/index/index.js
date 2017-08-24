@@ -1,10 +1,29 @@
 //index.js  
 //获取应用实例  
+var Bmob = require('../../utils/bmob.js');
 var app = getApp()
 var currentdate = app.globalData.date;
+var res;
+var Diary = Bmob.Object.extend("event_data");
+var query = new Bmob.Query(Diary);
+// 查询所有数据
+query.find({
+  success: function (results) {
+    console.log("共查询到 " + results.length + " 条记录");
+    // 循环处理查询到的数据
+    res=results;
+    for (var i = 0; i < results.length; i++) {
+      var object = results[i];
+      console.log(object.get('name') + ' - ' + object.get('phone'));
+    }
+  },
+  error: function (error) {
+    console.log("查询失败: " + error.code + " " + error.message);
+  }
+});
+
 Page({
   data: {
-
     /** 
         * 页面配置 
         */
@@ -16,13 +35,11 @@ Page({
     
 
     items: [
-      { name:"刁豫东", phone:4139945357, wechat:"yudongdiao2", qidian:"BDL", date:"2017-8-9", time:"18:00", zhongdian:"Amherst", usertype:"人找车", mode:"miniBus", seat:"2人"},
-      { name: "刁豫西", phone: 4139926367, wechat: "yudongdiao2", qidian: "Logan", date: "2017-7-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", mode: "SUV", seat: "2人"},
-      { name: "刁豫南", phone: 4139926367, wechat: "yudongdiao2", qidian: "Boston", date: "2017-8-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "Coupe", seat: "3空位"},
-      { name: "刁豫北", phone: 4139926367, wechat: "yudongdiao2", qidian: "Amherst", date: "2017-9-9", time: "18:00", zhongdian: "BDL", usertype: "车找人", mode: "SUV", seat: "2空位"},
-      { name: "刁豫东北", phone: 4139926367, wechat: "yudongdiao2", qidian: "JFK", date: "2017-9-9", time: "18:00", zhongdian: "Amherst", usertype: "人找车", mode: "Sedan", seat: "1人"},
-      { name: "刁豫西南", phone: 4139926367, wechat: "yudongdiao2", qidian: "Boston", date: "2017-10-9", time: "18:00", zhongdian: "Amherst", usertype: "车找人", mode: "SUV", seat: "2空位"},
-    ],
+      {
+        id: 0, name: "川普", phone:"9177568000", wechat:"DTrump", qidian:"White House", 
+        date: "2020-09-01", time: "7:00", zhongdian: "Congress", usertype: "车找人", mode:"Lincoln", seat:"3"},
+      ],
+      
 
     location: ["All", "Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
     index1: 0,
@@ -52,6 +69,17 @@ Page({
       }
 
     });
+    for(var i=0;i<res.length;i++){
+    this.data.items = [{ id: 0, name: res[i].get("name"), 
+    phone: res[i].get("phone"), wechat: res[i].get("wechat"), 
+    qidian:res[i].get("from"), date: res[i].get("date"), time:res[i].get("time"), 
+    zhongdian: res[i].get("to"), usertype: res[i].get("person"), mode: res[i].get("mode"), 
+    seat: res[i].get("seat")}].concat(this.data.items),
+
+    this.setData({
+      items: this.data.items
+    })
+  }
 
   },
 
@@ -109,14 +137,9 @@ Page({
   }, 
 
   onPullDownRefresh: function () {
-    // Do something when pull down.
-    console.log('刷新');
+   
   },
 
-  onPullDownRefresh: function () {
-    // Do something when pull down.
-    console.log('刷新');
-  },
 
   onReachBottom: function () {
     // Do something when page reach bottom.

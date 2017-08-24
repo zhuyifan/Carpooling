@@ -27,7 +27,7 @@ Page({
     index1: 0,
     index2: 0,
 
-    nop: [1, 2, 3, 4, 5],
+    nop: ["1", "2", "3", "4", "5"],
     nopIndex: 0,
   },
 
@@ -125,13 +125,13 @@ Page({
     else {
       var Diary = Bmob.Object.extend("event_data");
       var event_data = new Diary();
-      event_data.set("person", "passenger");
+      event_data.set("person", "人找车");
       event_data.set("name", app.globalData.userName);
       event_data.set("gender", app.globalData.gender);
       event_data.set("wechat", app.globalData.wechatId);
       event_data.set("countrycode", this.data.countryCodeIndex);
       event_data.set("phone", this.data.phoneNum);
-      event_data.set("seat", this.data.seat);
+      event_data.set("seat", this.data.seat+"人");
       event_data.set("from", this.data.start);
       event_data.set("to", this.data.end);
       event_data.set("date", this.data.date);
@@ -192,7 +192,7 @@ Page({
    */
   onShow: function () {
     console.log(this.data)
-    if (this.data.driverName == "") {
+    if (this.data.userName == "") {
       wx.showModal({
         title: '不给你进',
         content: '还没填写个人信息哦',
