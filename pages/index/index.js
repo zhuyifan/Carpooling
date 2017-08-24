@@ -4,12 +4,14 @@ var Bmob = require('../../utils/bmob.js');
 var app = getApp()
 var currentdate = app.globalData.date;
 var res;
+var len;
 var Diary = Bmob.Object.extend("event_data");
 var query = new Bmob.Query(Diary);
 // 查询所有数据
 query.find({
   success: function (results) {
     console.log("共查询到 " + results.length + " 条记录");
+    len=results.length;
     // 循环处理查询到的数据
     res=results;
     for (var i = 0; i < results.length; i++) {
@@ -69,8 +71,8 @@ Page({
       }
 
     });
-    for(var i=0;i<res.length;i++){
-    this.data.items = [{ id: 0, name: res[i].get("name"), 
+    for(var i=0; i<len; i++){
+    this.data.items = [{ id: res[i].get("id"), name: res[i].get("name"), 
     phone: res[i].get("phone"), wechat: res[i].get("wechat"), 
     qidian:res[i].get("from"), date: res[i].get("date"), time:res[i].get("time"), 
     zhongdian: res[i].get("to"), usertype: res[i].get("person"), mode: res[i].get("mode"), 
