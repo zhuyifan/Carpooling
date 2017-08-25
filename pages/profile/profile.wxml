@@ -22,7 +22,7 @@
   <view class="title">手机号</view>
   <view class="input">
       <input type="number" name="phoneNum" class="form-input" placeholder="必填"
-      align= "right" bindinput="numChange"/>
+      align= "right" bindinput="numChange" />
   </view>
 
   <view class="title">微信号</view>

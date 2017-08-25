@@ -156,7 +156,7 @@ Page({
 
   back: function () {
     wx.navigateBack({
-      url: '../add/add'
+      url: '../index/index'
     })
   },
 

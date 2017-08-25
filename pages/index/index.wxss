@@ -123,5 +123,18 @@
   background-color: whitesmoke;
 }
 
+.color1{
+  color: white;
+  background-color: orange;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+.color2{
+  color: white;
+  background-color: CornflowerBlue ;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+
 
 

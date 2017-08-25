@@ -15,7 +15,7 @@
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">车找人</view>
     <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">人找车</view> 
     <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">
-      <picker mode="date" value="{{da}}" start="{{curdate}}" end="2017-8-20" bindchange="bindDateChange" style="color: #A61203">
+      <picker mode="date" value="{{da}}" start="{{curdate}}" end="2018-8-20" bindchange="bindDateChange" style="color: #A61203">
         <view class="date-select">{{da}}</view>
       </picker>
     </view>
@@ -35,11 +35,14 @@
         <text selectable="true">微信号：{{item.wechat}}</text>
       </view>
       <view class="type">
-        <text>{{item.usertype}}/{{item.mode}}/{{item.seat}}</text>
+        <text><text class="color1" wx:if="{{item.usertype=='人找车'}}">{{item.usertype}}</text>
+        <text class="color2" wx:if="{{item.usertype=='车找人'}}">{{item.usertype}}</text>
+        <text wx:if="{{item.mode.length>0}}">/{{item.mode}}</text>/{{item.seat}}</text>
         <button class="call" bindtap="callmeTap">拨打电话</button>
       </view>
       <view class="people">
-        <image class="gender" src="/images/male.png"></image>
+        <image class="gender" wx:if="{{item.gender=='male'}}" src="/images/male.png"></image>
+        <image class="gender" wx:else src="/images/female.png"></image>
         <text>{{item.name}} {{item.phone}}</text>
       </view>
     </view>
