@@ -1,0 +1,38 @@
+/* pages/suggestion/suggestion.wxss */
+
+.submit {
+  padding-top: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.submitbtn {
+  color: white;
+  background-color: #A61203;
+  margin-top: 80rpx;
+}
+
+.comment{
+  background-color: white;
+  height:200rpx;
+  text-align: center;
+  padding-top: 15rpx;
+  outline-style:solid;
+  outline-width: 1rpx;
+  outline-color: black;
+}
+
+.title{
+  height:60rpx;
+  margin-left: 25rpx;
+  padding-top:20rpx;
+  font-size: 30rpx;
+  color: lightslategrey;
+}
+
+.page {
+  min-height: 100%;
+  flex: 1;
+  background-color: #FBF9FE;
+  font-size: 40rpx;
+}

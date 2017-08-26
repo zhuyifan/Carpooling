@@ -1,0 +1,157 @@
+/* pages/publish/publish.wxss */
+.bot{
+  margin-top:0rpx;
+}
+
+.title {
+  padding-top: 25rpx;
+  text-align:center;
+}
+
+.time{
+  color:gray;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.mode{
+  color:gray;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.type{
+  color: gray;
+  padding-top: 10px;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.people{
+  color: gray;
+  padding-top: 10px;
+  padding-left: 15rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}
+
+.gender{
+  padding-left: 10px;
+  height: 25rpx;
+  width: 25rpx;
+}
+
+.wechat-copy{
+  position:absolute;
+  right:20rpx;
+  font-size: 25rpx;
+  text-align:center;
+  color: white;
+  background-color: #5e5cc6;
+  border-radius: 10rpx;
+}
+
+.call{
+  position:absolute;
+  right:20rpx;
+  font-size: 25rpx;
+  text-align:center;
+  color: white;
+  background-color: #5cc6b0;
+  border-radius: 10rpx;
+}
+
+.divide{
+  height: 20rpx;
+  background-color: whitesmoke;
+}
+
+.color1{
+  color: white;
+  background-color: orange;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+.color2{
+  color: white;
+  background-color: CornflowerBlue ;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+
+
+.title {
+  padding-top: 25rpx;
+  text-align:center;
+}
+
+.time{
+  color:gray;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.mode{
+  color:gray;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.type{
+  color: gray;
+  padding-top: 10px;
+  padding-left: 35rpx;
+  font-size: 30rpx;
+}
+
+.people{
+  color: gray;
+  padding-top: 10px;
+  padding-left: 15rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}
+
+.gender{
+  padding-left: 10px;
+  height: 25rpx;
+  width: 25rpx;
+}
+
+.wechat-copy{
+  position:absolute;
+  right:20rpx;
+  font-size: 25rpx;
+  text-align:center;
+  color: white;
+  background-color: #5e5cc6;
+  border-radius: 10rpx;
+}
+
+.call{
+  position:absolute;
+  right:20rpx;
+  font-size: 25rpx;
+  text-align:center;
+  color: white;
+  background-color: #5cc6b0;
+  border-radius: 10rpx;
+}
+
+.divide{
+  height: 20rpx;
+  background-color: whitesmoke;
+}
+
+.color1{
+  color: white;
+  background-color: orange;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+.color2{
+  color: white;
+  background-color: CornflowerBlue ;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}

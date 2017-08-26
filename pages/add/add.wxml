@@ -11,6 +11,5 @@
   <button class="addbtn" bindtap="iampassenger" plain="true" style="border-style:none" >
   <image class="dpImage" src="../../images/passenger.png"></image>
   <text class="text">我是乘客</text>
-  <text class="text2">(仅提供包车服务)</text>
   </button>
 </view>

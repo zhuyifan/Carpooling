@@ -6,7 +6,9 @@
     "pages/me/me",
     "pages/profile/profile",
     "pages/driver/driver",
-    "pages/passenger/passenger"
+    "pages/passenger/passenger",
+    "pages/suggestion/suggestion",
+    "pages/publish/publish"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,28 @@
+<scroll-view class="bot" scroll-y = true>
+  <view class="card" wx:for="{{items}}" wx:key="id">
+    <view class="place">
+      <view class="title">
+        <text class="shifa">{{item.qidian}} ➔ {{item.zhongdian}}</text>
+      </view>
+      <view class="time" style="padding-top:10px;">
+        <text>出发时间：{{item.date}} {{item.time}}</text>
+        <button class="wechat-copy" bindtap="copyWechat" data-name="{{item.wechat}}">撤下发布</button>
+      </view>
+      <view class="mode" style="padding-top:10px;">
+        <text selectable="true">微信号：{{item.wechat}}</text>
+      </view>
+      <view class="type">
+        <text><text class="color1" wx:if="{{item.usertype=='人找车'}}">{{item.usertype}}</text>
+        <text class="color2" wx:if="{{item.usertype=='车找人'}}">{{item.usertype}}</text>
+        <text wx:if="{{item.mode.length>0}}">/{{item.mode}}</text>/{{item.seat}}</text>
+      </view>
+      <view class="people">
+        <image class="gender" wx:if="{{item.gender=='male'}}" src="/images/male.png"></image>
+        <image class="gender" wx:else src="/images/female.png"></image>
+        <text>{{item.name}} {{item.phone}}</text>
+      </view>
+    </view>
+    <view class="divide">
+</view>
+  </view>
+  </scroll-view>

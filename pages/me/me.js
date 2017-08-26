@@ -10,6 +10,19 @@ Page({
       url: '../profile/profile'
     })
   },
+
+  suggestTap: function () {
+    wx.navigateTo({
+      url: '../suggestion/suggestion'
+    })
+  },
+  
+  publishTap: function () {
+    wx.navigateTo({
+      url: '../publish/publish'
+    })
+  },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this
