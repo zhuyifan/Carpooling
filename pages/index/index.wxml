@@ -29,7 +29,7 @@
       </view>
       <view class="time" style="padding-top:10px;">
         <text>出发时间：{{item.date}} {{item.time}}</text>
-        <button class="wechat-copy" bindtap="copyWechat">复制微信号</button>
+        <button class="wechat-copy" bindtap="copyWechat" data-name="{{item.wechat}}">复制微信号</button>
       </view>
       <view class="mode" style="padding-top:10px;">
         <text selectable="true">微信号：{{item.wechat}}</text>
@@ -38,7 +38,7 @@
         <text><text class="color1" wx:if="{{item.usertype=='人找车'}}">{{item.usertype}}</text>
         <text class="color2" wx:if="{{item.usertype=='车找人'}}">{{item.usertype}}</text>
         <text wx:if="{{item.mode.length>0}}">/{{item.mode}}</text>/{{item.seat}}</text>
-        <button class="call" bindtap="callmeTap">拨打电话</button>
+        <button class="call" bindtap="callmeTap" data-phone="{{item.phone}}">拨打电话</button>
       </view>
       <view class="people">
         <image class="gender" wx:if="{{item.gender=='male'}}" src="/images/male.png"></image>

@@ -89,7 +89,7 @@ Page({
   copyWechat:function(e){
     var self = this;
     wx.setClipboardData({
-      data: this.data.items[0].wechat,
+      data: e.currentTarget.dataset.name,
       success: function (res) {
         // self.setData({copyTip:true}),  
         wx.showModal({
@@ -133,9 +133,9 @@ Page({
     console.log('date is ', e.detail.value)
   },
 
-  callmeTap: function () {
+  callmeTap: function (e) {
     wx.makePhoneCall({
-      phoneNumber: "4139926367"
+      phoneNumber: e.currentTarget.dataset.phone
     })
   }, 
 
