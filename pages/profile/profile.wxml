@@ -4,7 +4,7 @@
     <view class="title">姓名</view>
     <view class="input">  
       <input name="userInfo"  
-      class="form-input" placeholder="{{userInfo.nickName}}" 
+      class="form-input" placeholder="{{userInfo.nickName}}" value="{{userName}}" 
       bindinput="nameChange"
       align="right"/>
     </view>
@@ -12,7 +12,7 @@
     <view class="title">性别</view>
     <view class="input">
       <radio-group class="radio-group form-input" bindchange="radioChange">
-        <label class="radio" wx:for="{{items}}">
+        <label class="radio" wx:for="{{items}}" wx:key="{{gender}}">
           <radio value="{{item.gender}}" checked="{{item.checked}}"/>{{item.value}}
         </label>
       </radio-group>
@@ -22,13 +22,13 @@
   <view class="title">手机号</view>
   <view class="input">
       <input type="number" name="phoneNum" class="form-input" placeholder="必填"
-      align= "right" bindinput="numChange" />
+      align= "right" bindinput="numChange" value="{{phoneNum}}"/>
   </view>
 
   <view class="title">微信号</view>
   <view class="input">
       <input name="wechatId" class="form-input" placeholder="必填"
-      align= "right" bindinput="idChange"/>
+      align= "right" bindinput="idChange" value="{{wechatId}}"/>
   </view>
   
   <view class="submit">

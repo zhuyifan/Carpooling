@@ -135,6 +135,13 @@
   padding: 5rpx;
   border-radius: 10rpx;
 }
+.end{
+  color:#777777;
+  padding-top:5rpx;
+  text-align: center;
+  padding-bottom:100%;
+  background-color:whitesmoke;
+}
 
 
 

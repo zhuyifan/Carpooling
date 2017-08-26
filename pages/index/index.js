@@ -5,24 +5,7 @@ var app = getApp()
 var currentdate = app.globalData.date;
 var res;
 var len;
-var Diary = Bmob.Object.extend("event_data");
-var query = new Bmob.Query(Diary);
-// 查询所有数据
-query.find({
-  success: function (results) {
-    console.log("共查询到 " + results.length + " 条记录");
-    len=results.length;
-    // 循环处理查询到的数据
-    res=results;
-    for (var i = 0; i < results.length; i++) {
-      var object = results[i];
-      console.log(object.get('name') + ' - ' + object.get('phone'));
-    }
-  },
-  error: function (error) {
-    console.log("查询失败: " + error.code + " " + error.message);
-  }
-});
+
 
 Page({
   data: {
@@ -34,11 +17,7 @@ Page({
     // tab切换  
     currentTab: 0,
 
-    items: [
-      {
-        id: 0, name: "川普", gender:"male", phone:"9177568000", wechat:"DTrump", qidian:"White House", 
-        date: "2020-09-01", time: "7:00", zhongdian: "Congress", usertype: "车找人", mode:"Lincoln", seat:"3"},
-      ],
+    items: "",
       
 
     location: ["All", "Amherst", "Boston", "New York City", "Logan Airport", "BDL Airport", "JFK Airport"],
@@ -69,6 +48,21 @@ Page({
       }
 
     });
+
+    var Diary = Bmob.Object.extend("event_data");
+    var query = new Bmob.Query(Diary);
+    // 查询所有数据
+    query.find({
+      success: function (results) {
+        console.log("共查询到 " + results.length + " 条记录");
+        len = results.length;
+        // 循环处理查询到的数据
+        res = results;
+      },
+      error: function (error) {
+        console.log("查询失败: " + error.code + " " + error.message);
+      }
+    });
     for(var i=0; i<len; i++){
     this.data.items = [{ id: res[i].get("id"), gender: res[i].get("gender"), name: res[i].get("name"), 
     phone: res[i].get("phone"), wechat: res[i].get("wechat"), 
@@ -94,7 +88,7 @@ Page({
         // self.setData({copyTip:true}),  
         wx.showModal({
           title: '提示',
-          content: '微信号复制成功',
+          content: '微信号"'+e.currentTarget.dataset.name+'"复制成功，'+'请粘贴至搜索框添加好友',
           success: function (res) {
             if (res.confirm) {
               console.log('确定')
@@ -143,20 +137,6 @@ Page({
   onPullDownRefresh() {
     　　console.log('--------下拉刷新-------')
     　　wx.showNavigationBarLoading() //在标题栏中显示加载
-
-      for (var i = 0; i < len; i++) {
-        this.data.items = [{
-          id: res[i].get("id"), name: res[i].get("name"),
-          phone: res[i].get("phone"), wechat: res[i].get("wechat"),
-          qidian: res[i].get("from"), date: res[i].get("date"), time: res[i].get("time"),
-          zhongdian: res[i].get("to"), usertype: res[i].get("person"), mode: res[i].get("mode"),
-          seat: res[i].get("seat")
-        }].concat(this.data.items),
-
-          this.setData({
-            items: this.data.items
-          })
-      }
         wx.hideNavigationBarLoading() //完成停止加载
         wx.stopPullDownRefresh() //停止下拉刷新
       
@@ -182,8 +162,114 @@ Page({
   swichNav: function (e) {
 
     var that = this;
+    var t=e.currentTarget.dataset.t;
 
-    if (this.data.currentTab === e.target.dataset.current) {
+    if (t == 0) {
+      this.setData({
+        items: ""
+      })
+      var Diary = Bmob.Object.extend("event_data");
+      var query = new Bmob.Query(Diary);
+      // 查询所有数据
+      query.find({
+        success: function (results) {
+          console.log("共查询到 " + results.length + " 条记录");
+          len = results.length;
+          // 循环处理查询到的数据
+          res = results;
+        },
+        error: function (error) {
+          console.log("查询失败: " + error.code + " " + error.message);
+        }
+      });
+
+      for (var i = 0; i < len; i++) {
+        this.data.items = [{
+          id: res[i].get("id"), gender: res[i].get("gender"), name: res[i].get("name"),
+          phone: res[i].get("phone"), wechat: res[i].get("wechat"),
+          qidian: res[i].get("from"), date: res[i].get("date"), time: res[i].get("time"),
+          zhongdian: res[i].get("to"), usertype: res[i].get("person"), mode: res[i].get("mode"),
+          seat: res[i].get("seat")
+        }].concat(this.data.items),
+
+          this.setData({
+            items: this.data.items
+          })
+      }
+    }
+
+    if(t==1){
+      this.setData({
+        items: ""
+      })
+      var Diary = Bmob.Object.extend("event_data");
+      var query = new Bmob.Query(Diary);
+      query.equalTo("person", "车找人");
+      // 查询所有数据
+      query.find({
+        success: function (results) {
+          console.log("共查询到 " + results.length + " 条记录");
+          len = results.length;
+          // 循环处理查询到的数据
+          res = results;
+        },
+        error: function (error) {
+          console.log("查询失败: " + error.code + " " + error.message);
+        }
+      });
+
+      for (var i = 0; i < len; i++) {
+        this.data.items = [{
+          id: res[i].get("id"), gender: res[i].get("gender"), name: res[i].get("name"),
+          phone: res[i].get("phone"), wechat: res[i].get("wechat"),
+          qidian: res[i].get("from"), date: res[i].get("date"), time: res[i].get("time"),
+          zhongdian: res[i].get("to"), usertype: res[i].get("person"), mode: res[i].get("mode"),
+          seat: res[i].get("seat")
+        }].concat(this.data.items),
+
+          this.setData({
+            items: this.data.items
+          })
+      }
+      
+    }
+
+    else if(t=2){
+      this.setData({
+        items: ""
+      })
+      var Diary = Bmob.Object.extend("event_data");
+      var query = new Bmob.Query(Diary);
+      query.equalTo("person", "人找车");
+      // 查询所有数据
+      query.find({
+        success: function (results) {
+          console.log("共查询到 " + results.length + " 条记录");
+          len = results.length;
+          // 循环处理查询到的数据
+          res = results;
+        },
+        error: function (error) {
+          console.log("查询失败: " + error.code + " " + error.message);
+        }
+      });
+
+      for (var i = 0; i < len; i++) {
+        this.data.items = [{
+          id: res[i].get("id"), gender: res[i].get("gender"), name: res[i].get("name"),
+          phone: res[i].get("phone"), wechat: res[i].get("wechat"),
+          qidian: res[i].get("from"), date: res[i].get("date"), time: res[i].get("time"),
+          zhongdian: res[i].get("to"), usertype: res[i].get("person"), mode: res[i].get("mode"),
+          seat: res[i].get("seat")
+        }].concat(this.data.items),
+
+          this.setData({
+            items: this.data.items
+          })
+      }
+    }
+
+     if (this.data.currentTab === e.target.dataset.current) {
       return false;
     } else {
       that.setData({

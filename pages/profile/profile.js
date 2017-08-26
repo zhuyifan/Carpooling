@@ -13,7 +13,7 @@ Page({
    */
   data: {
     items: [
-      { gender: 'male', value: '男', checked: 'true' },
+      { gender: 'male', value: '男' },
       { gender: 'female', value: '女'},
     ],
     userName: "",
@@ -105,6 +105,11 @@ Page({
       app.globalData.wechatId = this.data.wechatId
       app.globalData.phoneNum = this.data.phoneNum
 
+      wx.setStorageSync('userName', this.data.userName)
+      wx.setStorageSync('gender', this.data.gender)
+      wx.setStorageSync('wechatId', this.data.wechatId)
+      wx.setStorageSync('phoneNum', this.data.phoneNum)
+
       console.log(this.data)
       var a = this.showSuccess()
       var b = setTimeout(this.back,1000)
@@ -147,6 +152,55 @@ Page({
       })
       console.log(userInfo.nickName)
     })
+
+    that = this;
+    //获取存储信息
+    wx.getStorage({
+      key: 'userName',
+      success: function (res) {
+        // success
+        that.setData({
+          userName: res.data
+        })
+      }
+    })
+
+    wx.getStorage({
+      key: 'gender',
+      success: function (res) {
+        // success
+        that.setData({
+          gender: res.data
+        })
+      }
+    })
+
+    wx.getStorage({
+      key: 'phoneNum',
+      success: function (res) {
+        // success
+        that.setData({
+          phoneNum: res.data
+        })
+      }
+    })
+
+    wx.getStorage({
+      key: 'wechatId',
+      success: function (res) {
+        // success
+        that.setData({
+          wechatId: res.data
+        })
+      }
+    })
+
+    if (this.data.gender == 'male') {
+      this.data.items[0].checked = "true"
+    }
+    else {
+      this.data.item[1].checked = "true"
+    }
   },
 
   /**
