@@ -155,3 +155,9 @@
   padding: 5rpx;
   border-radius: 10rpx;
 }
+
+.end{
+  color:#777777;
+  padding-top:15rpx;
+  text-align: center;
+}

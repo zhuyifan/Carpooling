@@ -1,4 +1,6 @@
-<scroll-view class="bot" scroll-y = true>
+<view class="end" wx:if="{{true}}">你还没有发布过拼车</view>
+
+<scroll-view class="bot" scroll-y = true wx:else>
   <view class="card" wx:for="{{items}}" wx:key="id">
     <view class="place">
       <view class="title">
