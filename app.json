@@ -13,7 +13,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#A61203",
-    "navigationBarTitleText": "安城拼车",
+    "navigationBarTitleText": "Amherst Carpool",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -24,20 +24,20 @@
       {
         "selectedIconPath": "images/car_active.png",
         "iconPath": "images/car.png",
-        "pagePath": "pages/index/index",
-        "text": "拼车"
+        "pagePath": "pages/index/index"
+        
       },
       {
         "selectedIconPath": "images/add_active.png",
         "iconPath": "images/add.png",
-        "pagePath": "pages/add/add",
-        "text": "发布"
+        "pagePath": "pages/add/add"
+        
       },
       {
         "selectedIconPath": "images/me_active.png",
         "iconPath": "images/me.png",
-        "pagePath": "pages/me/me",
-        "text": "我的"
+        "pagePath": "pages/me/me"
+        
       }
     ]
   },

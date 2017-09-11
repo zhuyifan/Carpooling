@@ -9,13 +9,13 @@
 </view>
     <ul>
       <view class="profile">
-        <button class="profile" bindtap="bindViewTap" plain="true">个人信息</button>
+        <button class="profile" bindtap="bindViewTap" plain="true">My Info</button>
       </view>
       <view class="history">
-        <button class="profile" bindtap="publishTap" plain="true">我的发布</button>
+        <button class="profile" bindtap="publishTap" plain="true">My Posts</button>
       </view>
       <view class="group">
-        <button class="profile" bindtap="suggestTap" plain="true">提出建议</button>
+        <button class="profile" bindtap="suggestTap" plain="true">Feedback</button>
       </view>
     </ul>
 </view>

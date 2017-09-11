@@ -2,7 +2,7 @@
 <view class="addContainer">
   <button class="addbtn" bindtap="iamdriver" plain="true" style="border-style:none" >
     <image class="dpImage" src="../../images/driver.png"></image>
-   <text class="text">我是司机</text>
+   <text class="text">I am a Driver</text>
   </button>
 </view>
 <view class="divide">
@@ -10,6 +10,6 @@
 <view class="addContainer">
   <button class="addbtn" bindtap="iampassenger" plain="true" style="border-style:none" >
   <image class="dpImage" src="../../images/passenger.png"></image>
-  <text class="text">我是乘客</text>
+  <text class="text">I am a Passenger</text>
   </button>
 </view>
