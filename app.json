@@ -13,7 +13,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#A61203",
-    "navigationBarTitleText": "Amherst Carpool",
+    "navigationBarTitleText": "UMass Carpool",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
